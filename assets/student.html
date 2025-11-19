@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS</title>
+    <link rel="icon" href="./imgs/Logo (2).png" type="image/icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+  </head>
+  <body>
+    <header class="header-student">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="./imgs/logo3.png" alt="VieLogo">
+          <div><strong>VieLMS</strong></div>
+        </a>
+      </div>
+    </header>
+    <div class="body-student">
+      <aside class="sidebar">
+        <nav>
+          <a class="active" href="student.html"
+            ><span class="material-symbols-outlined">home</span>Trang của tôi</a
+          >
+          <a href="score.html"
+            ><span class="material-symbols-outlined">school</span>Bảng điểm</a
+          >
+          <a href="attendance.html"
+            ><span class="material-symbols-outlined">task_alt</span>Chuyên
+            cần</a
+          >
+          <a href="schedule.html"
+            ><span class="material-symbols-outlined">calendar_today</span>Thời
+            khóa biểu</a
+          >
+          <!-- <a href="inbox.html"
+            ><span class="material-symbols-outlined">mail</span>Hộp thư</a
+          > -->
+          <a href="notifications.html"
+            ><span class="material-symbols-outlined">notifications</span>Thông
+            báo</a
+          >
+          <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+        </nav>
+      </aside>
+
+      <main class="content-student">
+        <!-- Section One -->
+        <section class="section-one">
+          <div class="section-header">
+            <h2>Chào mừng trở lại, <span id="studentName">Diệp Phi Long</span> 👋</h2>
+            <p>Chúc bạn một ngày học tập hiệu quả!</p>
+          </div>
+        </section>
+
+        <!-- Banner -->
+        <section class="activities-banner">
+          <div class="banner-header">
+            <h3>
+              Hoạt động & Sự kiện nổi bật
+            </h3>
+            <div class="banner-controls">
+              <button class="banner-btn prev" onclick="prevSlide()">
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+              <button class="banner-btn next" onclick="nextSlide()">
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="banner-slider">
+            <div class="banner-track">
+              <!-- Slide 1 -->
+              <div class="banner-slide active">
+                <div class="banner-image">
+                  <img src="./imgs/slider-3.png" alt="Hội thao" onerror="this.src='https://via.placeholder.com/800x300/6366f1/ffffff?text=Hội+Thao+Trường+2025'" />
+                  <div class="banner-badge featured">Nổi bật</div>
+                </div>
+                <div class="banner-content">
+                  <div class="banner-category sports">Thể thao</div>
+                  <h4 class="banner-title">Hội thao năm học 2025</h4>
+                  <p class="banner-description">
+                    Tham gia các môn thi đấu: Bóng đá, Bóng chuyền, Cầu lông, Điền kinh. <br> Đăng ký trước 20/11/2025.
+                  </p>
+                  <div class="banner-meta">
+                    <span class="banner-date">
+                      <span class="material-symbols-outlined">calendar_today</span>
+                      25-27/11/2025
+                    </span>
+                    <span class="banner-location">
+                      <span class="material-symbols-outlined">location_on</span>
+                      Sân vận động trường
+                    </span>
+                  </div>
+                  <button class="btn primary btn-sm">Đăng ký ngay</button>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="banner-slide">
+                <div class="banner-image">
+                  <img src="" alt="Cuộc thi" onerror="this.src='https://via.placeholder.com/800x300/8b5cf6/ffffff?text=Cuộc+Thi+Học+Sinh+Giỏi'" />
+                  <div class="banner-badge new">Mới</div>
+                </div>
+                <div class="banner-content">
+                  <div class="banner-category academic">Học thuật</div>
+                  <h4 class="banner-title">Cuộc thi Học sinh giỏi cấp trường</h4>
+                  <p class="banner-description">
+                    Các môn thi: Toán, Tiếng Việt, Ngoại ngữ, Đạo đức, Nghệ thuật. Giải thưởng hấp dẫn cho các em đạt giải cao.
+                  </p>
+                  <div class="banner-meta">
+                    <span class="banner-date">
+                      <span class="material-symbols-outlined">calendar_today</span>
+                      05/12/2025
+                    </span>
+                    <span class="banner-location">
+                      <span class="material-symbols-outlined">location_on</span>
+                      Hội trường A
+                    </span>
+                  </div>
+                  <button class="btn primary btn-sm">Xem chi tiết</button>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="banner-slide">
+                <div class="banner-image">
+                  <img src="" alt="Văn nghệ" onerror="this.src='https://via.placeholder.com/800x300/10b981/ffffff?text=Liên+Hoan+Văn+Nghệ'" />
+                </div>
+                <div class="banner-content">
+                  <div class="banner-category culture">Văn hóa</div>
+                  <h4 class="banner-title">Liên hoan văn nghệ chào mừng 20/11</h4>
+                  <p class="banner-description">
+                    Chương trình văn nghệ đặc sắc với sự tham gia của các lớp. Đăng ký tiết mục trước 15/11.
+                  </p>
+                  <div class="banner-meta">
+                    <span class="banner-date">
+                      <span class="material-symbols-outlined">calendar_today</span>
+                      20/11/2025
+                    </span>
+                    <span class="banner-location">
+                      <span class="material-symbols-outlined">location_on</span>
+                      Sân khấu trường
+                    </span>
+                  </div>
+                  <button class="btn primary btn-sm">Đăng ký tiết mục</button>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="banner-slide">
+                <div class="banner-image">
+                  <img src="" alt="Ngoại khóa" onerror="this.src='https://via.placeholder.com/800x300/f59e0b/ffffff?text=Trại+Hè+Sáng+Tạo'" />
+                  <div class="banner-badge hot">Hot</div>
+                </div>
+                <div class="banner-content">
+                  <div class="banner-category extracurricular">Ngoại khóa</div>
+                  <h4 class="banner-title">Trại hè sáng tạo 2025</h4>
+                  <p class="banner-description">
+                    Khám phá khoa học, công nghệ, nghệ thuật qua các hoạt động thực hành. Giới hạn 100 suất.
+                  </p>
+                  <div class="banner-meta">
+                    <span class="banner-date">
+                      <span class="material-symbols-outlined">calendar_today</span>
+                      01-05/06/2025
+                    </span>
+                    <span class="banner-location">
+                      <span class="material-symbols-outlined">location_on</span>
+                      Đà Lạt
+                    </span>
+                  </div>
+                  <button class="btn primary btn-sm">Tìm hiểu thêm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="banner-swiper">
+            <span class="swiper active" onclick="goToSlide(0)"></span>
+            <span class="swiper" onclick="goToSlide(1)"></span>
+            <span class="swiper" onclick="goToSlide(2)"></span>
+            <span class="swiper" onclick="goToSlide(3)"></span>
+          </div>
+        </section>
+
+        <!-- Dashboard -->
+        <div class="dashboard-grid">
+          <div class="stat-card">
+            <div class="stat-icon primary">
+              <span class="material-symbols-outlined">school</span>
+            </div>
+            <div class="stat-content">
+              <div class="stat-label">Điểm TB Học kỳ 1</div>
+              <div class="stat-value">8.2</div>
+              <div class="stat-change positive">
+                <span>↑ 0.3</span> so với tháng trước
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon success">
+              <span class="material-symbols-outlined">task_alt</span>
+            </div>
+            <div class="stat-content">
+              <div class="stat-label">Chuyên cần</div>
+              <div class="stat-value">96%</div>
+              <div class="stat-change positive">
+                <span>45/47</span> buổi có mặt
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon warning">
+              <span class="material-symbols-outlined">assignment</span>
+            </div>
+            <div class="stat-content">
+              <div class="stat-label">Bài tập chưa nộp</div>
+              <div class="stat-value">2</div>
+              <div class="stat-change negative">
+                <span>1</span> sắp đến hạn
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon info">
+              <span class="material-symbols-outlined">notifications</span>
+            </div>
+            <div class="stat-content">
+              <div class="stat-label">Thông báo mới</div>
+              <div class="stat-value">3</div>
+              <div class="stat-change">
+                <span>2</span> chưa đọc
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="dashboard-two-col">
+          <div class="dashboard-left">
+            <section class="panel">
+              <h3>
+                <span class="material-symbols-outlined">calendar_today</span>
+                Lịch học hôm nay
+              </h3>
+              <div class="today-schedule">
+                <div class="schedule-item">
+                  <div class="schedule-time">
+                    <span class="time-label">Tiết 1-2</span>
+                    <span class="time-value">7:00 - 8:30</span>
+                  </div>
+                  <div class="schedule-info">
+                    <div class="schedule-subject">Toán</div>
+                    <div class="schedule-meta">
+                      <span>Phòng:1</span>
+                      <span>Giáo viên: Bùi Duy Luận</span>
+                    </div>
+                  </div>
+                  <div class="schedule-status current">Đang học</div>
+                </div>
+
+                <div class="schedule-item">
+                  <div class="schedule-time">
+                    <span class="time-label">Tiết 3-4</span>
+                    <span class="time-value">8:45 - 10:15</span>
+                  </div>
+                  <div class="schedule-info">
+                    <div class="schedule-subject">Tiếng Việt</div>
+                    <div class="schedule-meta">
+                      <span>Phòng:2</span>
+                      <span>Giáo viên: Bùi Duy Luận</span>
+                    </div>
+                  </div>
+                  <div class="schedule-status upcoming">Sắp tới</div>
+                </div>
+
+                <div class="schedule-item">
+                  <div class="schedule-time">
+                    <span class="time-label">Tiết 5</span>
+                    <span class="time-value">10:30 - 11:15</span>
+                  </div>
+                  <div class="schedule-info">
+                    <div class="schedule-subject">Ngoại ngữ</div>
+                    <div class="schedule-meta">
+                      <span>Phòng:3</span>
+                      <span>Giáo viên: Bùi Duy Luận</span>
+                    </div>
+                  </div>
+                  <div class="schedule-status upcoming">Sắp tới</div>
+                </div>
+              </div>
+              <a href="schedule.html" class="btn ghost btn-full">
+                Xem thời khóa biểu đầy đủ
+              </a>
+            </section>
+
+            <!-- Assignments Due -->
+            <section class="panel">
+              <h3>
+                <span class="material-symbols-outlined">assignment</span>
+                Bài tập sắp đến hạn
+              </h3>
+              <div class="assignment-list">
+                <div class="assignment-item urgent">
+                  <div class="assignment-icon">📝</div>
+                  <div class="assignment-info">
+                    <div class="assignment-title">Bài tập Toán - Chương 3</div>
+                    <div class="assignment-meta">
+                      <span class="assignment-subject">Toán</span>
+                      <span class="assignment-due">Hạn nộp: Hôm nay, 17:00</span>
+                    </div>
+                  </div>
+                  <button class="btn primary btn-sm">Nộp bài</button>
+                </div>
+
+                <div class="assignment-item">
+                  <div class="assignment-icon">📖</div>
+                  <div class="assignment-info">
+                    <div class="assignment-title">Bài tập Tiếng Việt</div>
+                    <div class="assignment-meta">
+                      <span class="assignment-subject">Tiếng Việt</span>
+                      <span class="assignment-due">Hạn nộp: 15/11/2025</span>
+                    </div>
+                  </div>
+                  <button class="btn ghost btn-sm">Xem chi tiết</button>
+                </div>
+
+                <div class="assignment-item completed">
+                  <div class="assignment-icon">✅</div>
+                  <div class="assignment-info">
+                    <div class="assignment-title">Bài tập Ngoại ngữ - Unit 5</div>
+                    <div class="assignment-meta">
+                      <span class="assignment-subject">Ngoại ngữ</span>
+                      <span class="assignment-due">Đã nộp: 12/11/2025</span>
+                    </div>
+                  </div>
+                  <span class="badge success">Đã nộp</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right Column -->
+          <div class="dashboard-right">
+            <!-- Learning Progress -->
+            <section class="panel">
+              <h3>
+                <span class="material-symbols-outlined">trending_up</span>
+                Tiến độ học tập
+              </h3>
+              <div class="progress-item">
+                <div class="progress-header">
+                  <span class="progress-label">Toán</span>
+                  <span class="progress-value">8.4/10</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-84"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-header">
+                  <span class="progress-label">Ngoại ngữ</span>
+                  <span class="progress-value">8.5/10</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-85"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-header">
+                  <span class="progress-label">Tiếng Việt</span>
+                  <span class="progress-value">7.8/10</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-78 progress-warning"></div>
+                </div>
+              </div>
+
+              <div class="progress-item">
+                <div class="progress-header">
+                  <span class="progress-label">Đạo đức</span>
+                  <span class="progress-value">7.3/10</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-73 progress-warning"></div>
+                </div>
+              </div>
+
+              <a href="score.html" class="btn ghost btn-full">
+                Xem bảng điểm chi tiết
+              </a>
+            </section>
+
+            <!-- Recent Activities -->
+            <section class="panel">
+              <h3>
+                <span class="material-symbols-outlined">history</span>
+                Hoạt động gần đây
+              </h3>
+              <div class="activity-timeline">
+                <div class="activity-item">
+                  <div class="activity-dot success"></div>
+                  <div class="activity-content">
+                    <div class="activity-title">Đã nộp bài tập Ngoại ngữ - Unit 5</div>
+                    <div class="activity-time">2 giờ trước</div>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-dot info"></div>
+                  <div class="activity-content">
+                    <div class="activity-title">Nhận điểm kiểm tra Toán: 8.5</div>
+                    <div class="activity-time">1 ngày trước</div>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-dot warning"></div>
+                  <div class="activity-content">
+                    <div class="activity-title">Thông báo: Họp phụ huynh 15/11</div>
+                    <div class="activity-time">2 ngày trước</div>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-dot success"></div>
+                  <div class="activity-content">
+                    <div class="activity-title">Điểm danh: Có mặt đầy đủ tuần này</div>
+                    <div class="activity-time">3 ngày trước</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = sessionStorage.getItem("currentUser");
+        if (currentUser) {
+          const userName = currentUser.split("@")[0];
+          document.getElementById("userName").textContent = userName;
+          document.getElementById("studentName").textContent = userName;
+        }
+      });
+    </script>
+  </body>
+</html>

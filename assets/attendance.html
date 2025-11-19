@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyên cần - VieLMS</title>
+    <link rel="icon" href="./imgs/Logo (2).png" type="image/icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+  </head>
+  <body>
+    <header class="header-attendance">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="./imgs/logo3.png" alt="VieLogo">
+          <div><strong>VieLMS</strong></div>
+        </a>
+      </div>
+    </header>
+
+    <div class="body-attendance">
+      <aside class="sidebar">
+        <nav>
+          <a href="student.html"
+            ><span class="material-symbols-outlined">home</span>Trang của tôi</a
+          >
+          <a href="score.html"
+            ><span class="material-symbols-outlined">school</span>Bảng điểm</a
+          >
+          <a class="active" href="attendance.html"
+            ><span class="material-symbols-outlined">task_alt</span>Chuyên
+            cần</a
+          >
+          <a href="schedule.html"
+            ><span class="material-symbols-outlined">calendar_today</span>Thời
+            khóa biểu</a
+          >
+          <!-- <a href="inbox.html"
+            ><span class="material-symbols-outlined">mail</span>Hợp thư</a
+          > -->
+          <a href="notifications.html"
+            ><span class="material-symbols-outlined">notifications</span>Thông
+            báo</a
+          >
+          <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+        </nav>
+      </aside>
+
+      <main class="content-attendance">
+        <section class="panel">
+          <div class="shell-title">
+            <h2>Tổng quan chuyên cần</h2>
+            <p>Theo dõi tình hình điểm danh và vắng mặt</p>
+          </div>
+
+          <div class="kpi-cards">
+            <div class="card">
+              <span>Tổng số buổi</span>
+              <strong>47</strong>
+            </div>
+            <div class="card">
+              <span>Có mặt</span>
+              <strong class="success">45 buổi</strong>
+            </div>
+            <div class="card">
+              <span>Vắng có phép</span>
+              <strong class="warning">2 buổi</strong>
+            </div>
+            <div class="card">
+              <span>Vắng không phép</span>
+              <strong class="danger">0 buổi</strong>
+            </div>
+          </div>
+
+          <div class="progress-section">
+            <h4>Tỉ lệ chuyên cần</h4>
+            <div class="progress-bar section-spacing">
+              <div class="progress-fill" style="width: 96%">96%</div>
+            </div>
+            <p class="progress-description">
+              Tỉ lệ chuyên cần của bạn đang ở mức Xuất sắc
+            </p>
+          </div>
+        </section>
+
+        <section class="panel">
+              <div class="section-header-with-filter">
+                <h3>Lịch sử điểm danh</h3>
+            <div class="month-selector">
+              <select id="monthSelect" class="month-select">
+                <option value="2025-11" selected>Tháng 11/2025</option>
+                <option value="2025-10">Tháng 10/2025</option>
+                <option value="2025-09">Tháng 9/2025</option>
+                <option value="2025-08">Tháng 8/2025</option>
+                <option value="2025-07">Tháng 7/2025</option>
+                <option value="2025-06">Tháng 6/2025</option>
+                <option value="2025-05">Tháng 5/2025</option>
+                <option value="2025-04">Tháng 4/2025</option>
+                <option value="2025-03">Tháng 3/2025</option>
+                <option value="2025-02">Tháng 2/2025</option>
+                <option value="2025-01">Tháng 1/2025</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="attendance-status-section">
+            <div class="status-item">
+              <span class="status-box present"></span>
+              <span>Có mặt</span>
+            </div>
+            <div class="status-item">
+              <span class="status-box absent-excused"></span>
+              <span>Vắng có phép</span>
+            </div>
+            <div class="status-item">
+              <span class="status-box absent"></span>
+              <span>Vắng không phép</span>
+            </div>
+            <div class="status-item">
+              <span class="status-box weekend"></span>
+              <span>Cuối tuần</span>
+            </div>
+          </div>
+
+          <div class="attendance-table-wrapper"></div>
+            <table class="attendance-table">
+              <thead>
+                <tr>
+                  <th>Tuần</th>
+                  <th>Thứ 2</th>
+                  <th>Thứ 3</th>
+                  <th>Thứ 4</th>
+                  <th>Thứ 5</th>
+                  <th>Thứ 6</th>
+                  <th>Thứ 7</th>
+                  <th>CN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="week-label">Tuần 1</td>
+                  <td class="attendance-cell empty"></td>
+                  <td class="attendance-cell empty"></td>
+                  <td class="attendance-cell empty"></td>
+                  <td class="attendance-cell empty"></td>
+                  <td class="attendance-cell present" title="Có mặt - 01/11">
+                    <div class="cell-date">1</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell weekend">
+                    <div class="cell-date">2</div>
+                  </td>
+                  <td class="attendance-cell weekend">
+                    <div class="cell-date">3</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="week-label">Tuần 2</td>
+                  <td class="attendance-cell present" title="Có mặt - 04/11">
+                    <div class="cell-date">4</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 05/11">
+                    <div class="cell-date">5</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 06/11">
+                    <div class="cell-date">6</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 07/11">
+                    <div class="cell-date">7</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell absent-excused" title="Vắng có phép - 08/11">
+                    <div class="cell-date">8</div>
+                    <div class="cell-status">P</div>
+                  </td>
+                  <td class="attendance-cell weekend">
+                    <div class="cell-date">9</div>
+                  </td>
+                  <td class="attendance-cell weekend">
+                    <div class="cell-date">10</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="week-label">Tuần 3</td>
+                  <td class="attendance-cell present" title="Có mặt - 11/11">
+                    <div class="cell-date">11</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 12/11">
+                    <div class="cell-date">12</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 13/11">
+                    <div class="cell-date">13</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 14/11">
+                    <div class="cell-date">14</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 15/11">
+                    <div class="cell-date">15</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell weekend">
+                    <div class="cell-date">16</div>
+                  </td>
+                  <td class="attendance-cell weekend">
+                    <div class="cell-date">17</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="week-label">Tuần 4</td>
+                  <td class="attendance-cell present" title="Có mặt - 18/11">
+                    <div class="cell-date">18</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 19/11">
+                    <div class="cell-date">19</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 20/11">
+                    <div class="cell-date">20</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 21/11">
+                    <div class="cell-date">21</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell present" title="Có mặt - 22/11">
+                    <div class="cell-date">22</div>
+                    <div class="cell-status">✓</div>
+                  </td>
+                  <td class="attendance-cell weekend">
+                    <div class="cell-date">23</div>
+                  </td>
+                  <td class="attendance-cell weekend">
+                    <div class="cell-date">24</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="week-label">Tuần 5</td>
+                  <td class="attendance-cell future">
+                    <div class="cell-date">25</div>
+                  </td>
+                  <td class="attendance-cell future">
+                    <div class="cell-date">26</div>
+                  </td>
+                  <td class="attendance-cell future">
+                    <div class="cell-date">27</div>
+                  </td>
+                  <td class="attendance-cell future">
+                    <div class="cell-date">28</div>
+                  </td>
+                  <td class="attendance-cell future">
+                    <div class="cell-date">29</div>
+                  </td>
+                  <td class="attendance-cell weekend">
+                    <div class="cell-date">30</div>
+                  </td>
+                  <td class="attendance-cell empty"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

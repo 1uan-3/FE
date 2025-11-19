@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS - Dashboard Giáo viên</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header-teacher">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="./imgs/logo3.png" alt="VieLogo">
+          <div><strong>VieLMS</strong></div>
+        </a>
+        <!-- <div class="shell-tools">
+          <input type="search" placeholder="Tìm kiếm nhanh..." />
+          <div class="user">
+            <div class="avatar sm">GV</div>
+            <span id="userName">Giáo viên</span>
+            <button onclick="logout()" class="btn ghost">Đăng xuất</button>
+          </div>
+        </div> -->
+      </div>
+    </header>
+
+    <div class="body-teacher">
+      <aside class="sidebar">
+        <nav>
+          <a class="active" href="#"
+            ><span class="material-symbols-outlined">home</span>Trang chủ</a
+          >
+          <!-- <a href="teacher-students.html"
+            ><span class="material-symbols-outlined">school</span>Lớp của tôi</a
+          > -->
+          <a href="#"
+            ><span class="material-symbols-outlined">groups</span>Học sinh</a
+          >
+          <a href="teacher-attendance.html"
+            ><span class="material-symbols-outlined">task_alt</span>Điểm danh</a
+          >
+          <a href="teacher-grades.html"
+            ><span class="material-symbols-outlined">grade</span>Sổ điểm</a
+          >
+          <a href="teacher-schedule.html"
+            ><span class="material-symbols-outlined">calendar_today</span>Thời khóa biểu</a
+          >
+  <a href="teacher-notifications.html"
+            ><span class="material-symbols-outlined">notifications</span>Thông báo</a
+          >
+          <a href="logout.html"
+            ><span class="material-symbols-outlined">logout</span>Đăng xuất</a
+          >
+        </nav>
+      </aside>
+
+      <main class="content-teacher">
+        <section class="panel">
+          <div class="shell-title">
+            <h2>Trang chủ Giáo viên</h2>
+            <p>Quản lý lớp học, điểm danh và sổ điểm</p>
+          </div>
+
+          <div class="kpi-cards">
+            <div class="card">
+              <span>Số lớp phụ trách</span>
+              <strong>3</strong>
+            </div>
+            <div class="card">
+              <span>Tổng học sinh</span>
+              <strong>105</strong>
+            </div>
+            <div class="card">
+              <span>Chuyên cần tuần</span>
+              <strong class="success">94%</strong>
+            </div>
+            <div class="card">
+              <span>Thông báo mới</span>
+              <strong>5</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Lớp của tôi</h3>
+          <div class="filters section-spacing">
+            <select>
+              <option>Tất cả lớp</option>
+              <option>3A3</option>
+              <option>4B1</option>
+              <option>5C2</option>
+            </select>
+            <button class="btn ghost">Thêm lớp mới</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Lớp</th>
+                <th>Môn học</th>
+                <th>Số HS</th>
+                <th>Điểm TB</th>
+                <th>Chuyên cần</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>3A3</strong></td>
+                <td>Toán</td>
+                <td>35</td>
+                <td><span class="badge accent">8.2</span></td>
+                <td>96%</td>
+                <td>
+                  <a href="#" class="link-accent">Điểm danh</a> |
+                  <a href="#" class="link-accent">Sổ điểm</a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>4B1</strong></td>
+                <td>Toán</td>
+                <td>34</td>
+                <td><span class="badge accent">7.8</span></td>
+                <td>92%</td>
+                <td>
+                  <a href="#" class="link-accent">Điểm danh</a> |
+                  <a href="#" class="link-accent">Sổ điểm</a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>5C2</strong></td>
+                <td>Toán</td>
+                <td>36</td>
+                <td><span class="badge accent">7.5</span></td>
+                <td>89%</td>
+                <td>
+                  <a href="#" class="link-accent">Điểm danh</a> |
+                  <a href="#" class="link-accent">Sổ điểm</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="panel">
+          <h3>Điểm danh hôm nay - Lớp 3A3</h3>
+          <div class="filters section-spacing">
+            <select>
+              <option>Lớp 3A3</option>
+              <option>Lớp 4B1</option>
+              <option>Lớp 5C2</option>
+            </select>
+            <input type="date" value="2025-11-13" class="input-auto" />
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Học sinh</th>
+                <th>Trạng thái</th>
+                <th>Ghi chú</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Diệp Phi Long</td>
+                <td>
+                  <select class="input-auto">
+                    <option selected>Có mặt</option>
+                    <option>Vắng có phép</option>
+                    <option>Vắng không phép</option>
+                  </select>
+                </td>
+                <td><input type="text" placeholder="Ghi chú..." /></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Lê Thị Bảo Trân</td>
+                <td>
+                  <select class="input-auto">
+                    <option selected>Có mặt</option>
+                    <option>Vắng có phép</option>
+                    <option>Vắng không phép</option>
+                  </select>
+                </td>
+                <td><input type="text" placeholder="Ghi chú..." /></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Trần Văn Cường</td>
+                <td>
+                  <select class="input-auto">
+                    <option>Có mặt</option>
+                    <option selected>Vắng có phép</option>
+                    <option>Vắng không phép</option>
+                  </select>
+                </td>
+                <td><input type="text" value="Ốm, có giấy phép" /></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Phạm Thị Dung</td>
+                <td>
+                  <select class="input-auto">
+                    <option selected>Có mặt</option>
+                    <option>Vắng có phép</option>
+                    <option>Vắng không phép</option>
+                  </select>
+                </td>
+                <td><input type="text" placeholder="Ghi chú..." /></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Hoàng Văn Em</td>
+                <td>
+                  <select class="input-auto">
+                    <option selected>Có mặt</option>
+                    <option>Vắng có phép</option>
+                    <option>Vắng không phép</option>
+                  </select>
+                </td>
+                <td><input type="text" placeholder="Ghi chú..." /></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="form-actions btn-spacing">
+            <button class="btn ghost">Lưu tạm</button>
+            <button class="btn primary">Lưu và gửi thông báo</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Sổ điểm - Lớp 3A3 - Học kỳ 1</h3>
+          <div class="filters section-spacing">
+            <select>
+              <option>Lớp 3A3</option>
+              <option>Lớp 4B1</option>
+              <option>Lớp 5C2</option>
+            </select>
+            <select>
+              <option>Học kỳ 1</option>
+              <option>Học kỳ 2</option>
+            </select>
+            <select>
+              <option>Điểm miệng</option>
+              <option>Điểm 15 phút</option>
+              <option>Điểm 1 tiết</option>
+              <option>Điểm cuối kỳ</option>
+            </select>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Học sinh</th>
+                <th>Miệng</th>
+                <th>15 phút</th>
+                <th>1 tiết</th>
+                <th>Cuối kỳ</th>
+                <th>TB</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Nguyễn Minh An</td>
+                <td><input type="number" value="8.5" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="9.0" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="8.2" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="8.5" step="0.1" class="input-narrow" /></td>
+                <td><span class="badge accent">8.6</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Lê Thị Bảo Trân</td>
+                <td><input type="number" value="7.5" step="0.1" class="input-narrow"  /></td>
+                <td><input type="number" value="8.0" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="8.3" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="8.0" step="0.1" class="input-narrow" /></td>
+                <td><span class="badge accent">7.9</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Trần Văn Cường</td>
+                <td><input type="number" value="9.0" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="9.5" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="9.0" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="9.2" step="0.1" class="input-narrow" /></td>
+                <td><span class="badge accent">9.2</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Phạm Thị Dung</td>
+                <td><input type="number" value="6.5" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="7.0" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="6.8" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="7.0" step="0.1" class="input-narrow" /></td>
+                <td><span class="badge accent">6.8</span></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Hoàng Văn Em</td>
+                <td><input type="number" value="8.0" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="8.5" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="8.0" step="0.1" class="input-narrow" /></td>
+                <td><input type="number" value="8.3" step="0.1" class="input-narrow" /></td>
+                <td><span class="badge accent">8.2</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="form-actions btn-spacing">
+            <button class="btn ghost">Lưu</button>
+            <button class="btn primary">Xuất CSV</button>
+            <button class="btn primary">Xuất PDF</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Thời khóa biểu tuần này</h3>
+          <div class="schedule-grid">
+            <div class="schedule-day">
+              <div class="day-header">Thứ 2</div>
+              <div class="schedule-slot">
+                <strong>Toán - 3A3</strong>
+                <small>Tiết 1-2 • Phòng 201</small>
+              </div>
+              <div class="schedule-slot">
+                <strong>Toán - 4B1</strong>
+                <small>Tiết 3-4 • Phòng 305</small>
+              </div>
+            </div>
+            <div class="schedule-day">
+              <div class="day-header">Thứ 3</div>
+              <div class="schedule-slot">
+                <strong>Khoa học - 5C2</strong>
+                <small>Tiết 1-2 • Phòng 402</small>
+              </div>
+            </div>
+            <div class="schedule-day">
+              <div class="day-header">Thứ 4</div>
+              <div class="schedule-slot">
+                <strong>Ngoại ngữ - 3A3</strong>
+                <small>Tiết 1-2 • Phòng 201</small>
+              </div>
+              <div class="schedule-slot">
+                <strong>Toán - 4B1</strong>
+                <small>Tiết 5 • Phòng 305</small>
+              </div>
+            </div>
+            <div class="schedule-day">
+              <div class="day-header">Thứ 5</div>
+              <div class="schedule-slot">
+                <strong>Tiếng Việt - 5C2</strong>
+                <small>Tiết 3-4 • Phòng 402</small>
+              </div>
+            </div>
+            <div class="schedule-day">
+              <div class="day-header">Thứ 6</div>
+              <div class="schedule-slot">
+                <strong>Toán - 3A3</strong>
+                <small>Tiết 1-2 • Phòng 201</small>
+              </div>
+            </div>
+          </div>
+          <button class="btn ghost btn-spacing">In lịch tuần</button>
+        </section>
+
+        <section class="panel">
+          <h3>Gửi thông báo</h3>
+          <form class="compose section-spacing">
+            <label
+              ><span>Gửi đến</span>
+              <select required>
+                <option value="">-- Chọn đối tượng --</option>
+                <option>Lớp 3A3</option>
+                <option>Lớp 4B1</option>
+                <option>Lớp 5C2</option>
+                <option>Tất cả lớp</option>
+              </select>
+            </label>
+            <label
+              ><span>Tiêu đề</span>
+              <input type="text" placeholder="Nhập tiêu đề thông báo" required />
+            </label>
+            <label
+              ><span>Nội dung</span>
+              <textarea
+                rows="5"
+                placeholder="Nhập nội dung thông báo..."
+                required
+              ></textarea>
+            </label>
+            <button type="submit" class="btn primary">Gửi thông báo</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

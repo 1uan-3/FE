@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách học sinh - VieLMS</title>
+    <link rel="icon" href="./imgs/Logo (2).png" type="image/icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+  </head>
+  <body>
+    <header class="header-teacher">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="./imgs/logo3.png" alt="VieLogo">
+          <div><strong>VieLMS</strong></div>
+        </a>
+      </div>
+    </header>
+
+    <div class="body-teacher">
+      <aside class="sidebar">
+        <nav>
+          <a href="teacher.html"
+            ><span class="material-symbols-outlined">home</span>Trang chủ</a
+          >
+          <!-- <a href="#"
+            ><span class="material-symbols-outlined">school</span>Lớp của tôi</a
+          > -->
+          <a class="active" href="teacher-students.html"
+            ><span class="material-symbols-outlined">groups</span>Học sinh</a
+          >
+          <a href="teacher-attendance.html"
+            ><span class="material-symbols-outlined">task_alt</span>Điểm danh</a
+          >
+          <a href="teacher-grades.html"
+            ><span class="material-symbols-outlined">grade</span>Sổ điểm</a
+          >
+    <a href="teacher-schedule.html"
+            ><span class="material-symbols-outlined">calendar_today</span>Thời khóa biểu</a
+          >
+          <a href="teacher-notifications.html"
+            ><span class="material-symbols-outlined">notifications</span>Thông báo</a
+          >
+          <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+        </nav>
+      </aside>
+
+      <main class="content-teacher">
+        <section class="panel">
+          <div class="section-header-with-filter">
+            <h3>Danh sách học sinh</h3>
+            <div class="month-selector">
+              <label for="classSelect">Chọn lớp:</label>
+              <select id="classSelect" class="month-select">
+                <option value="3a3" selected>Lớp 3A3</option>
+                <option value="4b1">Lớp 4B1</option>
+                <option value="5c2">Lớp 5C2</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="kpi-cards">
+            <div class="card">
+              <span>Tổng số học sinh</span>
+              <strong>35</strong>
+            </div>
+            <div class="card">
+              <span>Nam</span>
+              <strong class="primary">18</strong>
+            </div>
+            <div class="card">
+              <span>Nữ</span>
+              <strong class="accent">17</strong>
+            </div>
+            <div class="card">
+              <span>Điểm TB lớp</span>
+              <strong class="success">8.2</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Danh sách chi tiết</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Họ và tên</th>
+                <th>Giới tính</th>
+                <th>Ngày sinh</th>
+                <th>Điểm TB</th>
+                <th>Chuyên cần</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Nguyễn Văn A</td>
+                <td>Nam</td>
+                <td>15/03/2015</td>
+                <td><span class="badge success">8.5</span></td>
+                <td><span class="badge success">96%</span></td>
+                <td>
+                  <button class="btn ghost btn-sm">Xem chi tiết</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Trần Thị B</td>
+                <td>Nữ</td>
+                <td>22/07/2015</td>
+                <td><span class="badge success">9.0</span></td>
+                <td><span class="badge success">100%</span></td>
+                <td>
+                  <button class="btn ghost btn-sm">Xem chi tiết</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Lê Văn C</td>
+                <td>Nam</td>
+                <td>10/11/2015</td>
+                <td><span class="badge warning">7.2</span></td>
+                <td><span class="badge warning">85%</span></td>
+                <td>
+                  <button class="btn ghost btn-sm">Xem chi tiết</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

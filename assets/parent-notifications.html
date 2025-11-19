@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông báo - VieLMS</title>
+    <link rel="icon" href="./imgs/Logo (2).png" type="image/icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+  </head>
+  <body>
+    <header class="header-notifications">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="./imgs/logo3.png" alt="VieLogo">
+          <div><strong>VieLMS</strong></div>
+        </a>
+      </div>
+    </header>
+
+    <div class="body-notifications">
+      <aside class="sidebar">
+        <nav>
+          <a href="parent.html"
+            ><span class="material-symbols-outlined">home</span>Con của tôi</a
+          >
+          <a href="parent-score.html"
+            ><span class="material-symbols-outlined">school</span>Bảng điểm</a
+          >
+          <a href="parent-attendance.html"
+            ><span class="material-symbols-outlined">task_alt</span>Chuyên cần</a
+          >
+          <a href="leave-request.html"
+            ><span class="material-symbols-outlined">event_busy</span>Xin phép vắng/trễ</a
+          >
+          <a href="parent-schedule.html"
+            ><span class="material-symbols-outlined">calendar_today</span>Thời khóa biểu</a
+          >
+          <!-- <a href="inbox.html"
+            ><span class="material-symbols-outlined">mail</span>Hợp thư</a
+          > -->
+          <a class="active" href="parent-notifications.html"
+            ><span class="material-symbols-outlined">notifications</span>Thông báo</a
+          >
+          <a href="logout.html"
+            ><span class="material-symbols-outlined">logout</span>Đăng xuất</a
+          >
+        </nav>
+      </aside>
+
+      <main class="content-notifications">
+        <section class="panel">
+          <div class="shell-title">
+            <h2>Thông báo</h2>
+            <p>Tất cả thông báo và tin nhắn từ nhà trường</p>
+          </div>
+
+          <div class="action-bar">
+            <div class="action-bar-left">
+              <div class="tabs">
+                <div class="tab active" onclick="filterNotifications('all')">
+                  Tất cả <span class="badge success">6</span>
+                </div>
+                <div class="tab" onclick="filterNotifications('unread')">
+                  Chưa đọc <span class="badge warning">3</span>
+                </div>
+                <div class="tab" onclick="filterNotifications('important')">
+                  Quan trọng <span class="badge danger">1</span>
+                </div>
+              </div>
+            </div>
+            <div class="action-bar-right">
+              <button class="btn ghost" onclick="markAllAsRead()">
+                <span class="material-symbols-outlined">done_all</span>
+                Đánh dấu đã đọc
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="notifications-list">
+          <div class="notification-item unread important">
+            <div class="notification-icon important">
+              <span class="material-symbols-outlined">campaign</span>
+            </div>
+            <div class="notification-content">
+              <div class="notification-header">
+                <h4 class="notification-title">
+                  Thông báo quan trọng: Lịch thi giữa kỳ
+                </h4>
+                <span class="notification-badge important">Quan trọng</span>
+              </div>
+              <p class="notification-message">
+                Lịch thi giữa kỳ học kỳ 1 năm học 2024-2025 sẽ diễn ra từ ngày
+                05/12 đến 10/12. Học sinh cần chuẩn bị tốt kiến thức và mang
+                đầy đủ dụng cụ học tập.
+              </p>
+              <div class="notification-meta">
+                <span class="notification-sender">Ban Giám Hiệu</span>
+                <span class="notification-time">2 giờ trước</span>
+              </div>
+            </div>
+            <div class="notification-actions">
+              <button class="btn-icon" title="Đánh dấu đã đọc">
+                <span class="material-symbols-outlined">done</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Unread -->
+          <div class="notification-item unread">
+            <div class="notification-icon info">
+              <span class="material-symbols-outlined">assignment</span>
+            </div>
+            <div class="notification-content">
+              <div class="notification-header">
+                <h4 class="notification-title">Bài tập mới: Toán - Chương 3</h4>
+              </div>
+              <p class="notification-message">
+                GV Trần Văn B đã giao bài tập mới cho môn Toán. Hạn nộp:
+                15/11/2025. Vui lòng hoàn thành và nộp đúng hạn.
+              </p>
+              <div class="notification-meta">
+                <span class="notification-sender">Giáo viên Toán - Bùi Duy Luận</span>
+                <span class="notification-time">5 giờ trước</span>
+              </div>
+            </div>
+            <div class="notification-actions">
+              <button class="btn-icon" title="Đánh dấu đã đọc">
+                <span class="material-symbols-outlined">done</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Unread -->
+          <div class="notification-item unread">
+            <div class="notification-icon success">
+              <span class="material-symbols-outlined">grade</span>
+            </div>
+            <div class="notification-content">
+              <div class="notification-header">
+                <h4 class="notification-title">Điểm kiểm tra đã được cập nhật</h4>
+              </div>
+              <p class="notification-message">
+                Điểm kiểm tra 1 tiết môn Toán của bạn: 8.5. Chúc mừng bạn đã
+                đạt kết quả tốt!
+              </p>
+              <div class="notification-meta">
+                <span class="notification-sender">Giáo viên Toán - Bùi Duy Luận</span>
+                <span class="notification-time">1 ngày trước</span>
+              </div>
+            </div>
+            <div class="notification-actions">
+              <button class="btn-icon" title="Đánh dấu đã đọc">
+                <span class="material-symbols-outlined">done</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Read -->
+          <div class="notification-item">
+            <div class="notification-icon warning">
+              <span class="material-symbols-outlined">event</span>
+            </div>
+            <div class="notification-content">
+              <div class="notification-header">
+                <h4 class="notification-title">Họp phụ huynh học kỳ 1</h4>
+              </div>
+              <p class="notification-message">
+                Kính mời phụ huynh tham dự buổi họp phụ huynh học kỳ 1 vào ngày
+                20/11/2025 lúc 18h00 tại hội trường trường.
+              </p>
+              <div class="notification-meta">
+                <span class="notification-sender">Giáo viên Chủ nhiệm</span>
+                <span class="notification-time">2 ngày trước</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Read -->
+          <div class="notification-item">
+            <div class="notification-icon info">
+              <span class="material-symbols-outlined">celebration</span>
+            </div>
+            <div class="notification-content">
+              <div class="notification-header">
+                <h4 class="notification-title">Hội thao trường học 2025</h4>
+              </div>
+              <p class="notification-message">
+                Đăng ký tham gia Hội thao trường học 2025. Các môn thi đấu: Bóng
+                đá, Bóng chuyền, Cầu lông. Hạn đăng ký: 20/11/2025.
+              </p>
+              <div class="notification-meta">
+                <span class="notification-sender">Ban Giám Hiệu</span>
+                <span class="notification-time">3 ngày trước</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Read -->
+          <div class="notification-item">
+            <div class="notification-icon success">
+              <span class="material-symbols-outlined">task_alt</span>
+            </div>
+            <div class="notification-content">
+              <div class="notification-header">
+                <h4 class="notification-title">Chuyên cần xuất sắc</h4>
+              </div>
+              <p class="notification-message">
+                Chúc mừng bạn đã đạt 100% chuyên cần trong tháng 10. Tiếp tục
+                phát huy!
+              </p>
+              <div class="notification-meta">
+                <span class="notification-sender">Hệ thống</span>
+                <span class="notification-time">1 tuần trước</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+      function filterNotifications(type) {
+        const tabs = document.querySelectorAll(".tab");
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        event.target.classList.add("active");
+
+        const notifications = document.querySelectorAll(".notification-item");
+        notifications.forEach((notif) => {
+          if (type === "all") {
+            notif.style.display = "flex";
+          } else if (type === "unread") {
+            notif.style.display = notif.classList.contains("unread")
+              ? "flex"
+              : "none";
+          } else if (type === "important") {
+            notif.style.display = notif.classList.contains("important")
+              ? "flex"
+              : "none";
+          }
+        });
+      }
+
+      function markAllAsRead() {
+        const unreadNotifs = document.querySelectorAll(".notification-item.unread");
+        unreadNotifs.forEach((notif) => {
+          notif.classList.remove("unread");
+        });
+        alert("Đã đánh dấu tất cả thông báo là đã đọc");
+      }
+
+      document.querySelectorAll(".btn-icon").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const notifItem = this.closest(".notification-item");
+          notifItem.classList.remove("unread");
+        });
+      });
+    </script>
+  </body>
+</html>

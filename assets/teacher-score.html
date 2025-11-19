@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sổ điểm - VieLMS</title>
+    <link rel="icon" href="./imgs/Logo (2).png" type="image/icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+  </head>
+  <body>
+    <header class="header-teacher">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="./imgs/logo3.png" alt="VieLogo">
+          <div><strong>VieLMS</strong></div>
+        </a>
+      </div>
+    </header>
+
+    <div class="body-teacher">
+      <aside class="sidebar">
+        <nav>
+          <a href="teacher.html"
+            ><span class="material-symbols-outlined">home</span>Trang chủ</a
+          >
+          <!-- <a href="#"
+            ><span class="material-symbols-outlined">school</span>Lớp của tôi</a
+          > -->
+          <a href="teacher-students.html"
+            ><span class="material-symbols-outlined">groups</span>Học sinh</a
+          >
+          <a href="teacher-attendance.html"
+            ><span class="material-symbols-outlined">task_alt</span>Điểm danh</a
+          >
+          <a class="active" href="teacher-score.html"
+            ><span class="material-symbols-outlined">grade</span>Sổ điểm</a
+          >
+          <a href="teacher-schedule.html"
+            ><span class="material-symbols-outlined">calendar_today</span>Thời khóa biểu</a
+          >
+        <a href="teacher-notifications.html"
+            ><span class="material-symbols-outlined">notifications</span>Thông báo</a
+          >
+          <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+        </nav>
+      </aside>
+
+      <main class="content-teacher">
+        <section class="panel">
+          <div class="section-header-with-filter">
+            <h3>Sổ điểm</h3>
+          </div>
+            <div class="score-filters">
+              <select class="class-select">
+                <option value="3a3" selected>Lớp 3A3</option>
+                <option value="4b1">Lớp 4B1</option>
+                <option value="5c2">Lớp 5C2</option>
+              </select>
+              <select class="class-select">
+                <option value="math" selected>Toán</option>
+                <option value="literature">Tiếng Việt</option>
+                <option value="english">Ngoại ngữ</option>
+              </select>
+              <select class="class-select">
+                <option value="hk1" selected>Học kỳ 1</option>
+                <option value="hk2">Học kỳ 2</option>
+              </select>
+            </div>
+        </section>
+
+        <section class="panel">
+          <h3>Bảng điểm chi tiết</h3>
+          <div class="table-wrapper">
+            <table class="score-table">
+              <thead>
+                <tr>
+                  <th rowspan="2">STT</th>
+                  <th rowspan="2">Họ và tên</th>
+                  <th colspan="3">Điểm thường xuyên</th>
+                  <th rowspan="2">1 tiết</th>
+                  <th rowspan="2">Cuối kỳ</th>
+                  <th rowspan="2">TB</th>
+                </tr>
+                <tr>
+                  <th>Miệng</th>
+                  <th>Miệng</th>
+                  <th>15 phút</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Nguyễn Văn A</td>
+                  <td><input type="number" class="score-input" value="8" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="9" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="8.5" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="8" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="9" min="0" max="10" step="0.5" /></td>
+                  <td><strong>8.5</strong></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Trần Thị B</td>
+                  <td><input type="number" class="score-input" value="9" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="9.5" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="9" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="9" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="9.5" min="0" max="10" step="0.5" /></td>
+                  <td><strong>9.2</strong></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Lê Văn C</td>
+                  <td><input type="number" class="score-input" value="7" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="7.5" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="7" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="7" min="0" max="10" step="0.5" /></td>
+                  <td><input type="number" class="score-input" value="7.5" min="0" max="10" step="0.5" /></td>
+                  <td><strong>7.2</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn ghost">Hủy</button>
+            <button class="btn primary">Lưu điểm</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

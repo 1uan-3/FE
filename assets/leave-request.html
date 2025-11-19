@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xin phép vắng/đi trễ - VieLMS</title>
+    <link rel="icon" href="./imgs/Logo (2).png" type="image/icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+  </head>
+  <body>
+    <header class="header-leaverequest">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="./imgs/logo3.png" alt="VieLogo">
+          <div><strong>VieLMS</strong></div>
+        </a>
+      </div>
+    </header>
+
+    <div class="body-leaverequest">
+      <aside class="sidebar">
+        <nav>
+          <a href="parent.html"
+            ><span class="material-symbols-outlined">home</span>Con của tôi</a
+          >
+          <a href="parent-score.html"
+            ><span class="material-symbols-outlined">school</span>Bảng điểm</a
+          >
+          <a href="parent-attendance.html"
+            ><span class="material-symbols-outlined">task_alt</span>Chuyên cần</a
+          >
+          <a class="active" href="leave-request.html"
+            ><span class="material-symbols-outlined">event_busy</span>Xin phép vắng/trễ</a
+          >
+          <a href="parent-schedule.html"
+            ><span class="material-symbols-outlined">calendar_today</span>Thời khóa biểu</a
+          >
+          <!-- <a href="inbox.html"
+            ><span class="material-symbols-outlined">mail</span>Hợp thư</a
+          > -->
+          <a href="parent-notifications.html"
+            ><span class="material-symbols-outlined">notifications</span>Thông báo</a
+          >
+          <a href="logout.html"
+            ><span class="material-symbols-outlined">logout</span>Đăng xuất</a
+          >
+        </nav>
+      </aside>
+
+      <main class="content-leaverequest">
+        <section class="panel">
+          <div class="shell-title">
+            <h2>Xin phép vắng / Đi trễ</h2>
+            <p>Gửi đơn xin phép cho giáo viên chủ nhiệm</p>
+          </div>
+        </section>
+
+        <div class="dashboard-two-col">
+          <!-- Form xin phép -->
+          <div class="dashboard-left">
+            <section class="panel">
+              <h3>
+                <span class="material-symbols-outlined">edit_note</span>
+                Tạo đơn xin phép mới
+              </h3>
+
+              <form class="compose" id="leaveRequestForm">
+                <label>
+                  <span>Loại đơn</span>
+                  <select required id="requestType">
+                    <option value="">-- Chọn loại đơn --</option>
+                    <option value="absent">Xin phép vắng mặt</option>
+                    <option value="late">Xin phép đi trễ</option>
+                    <option value="early">Xin phép về sớm</option>
+                  </select>
+                </label>
+
+                <label>
+                  <span>Học sinh</span>
+                  <select required>
+                    <option value="">-- Chọn học sinh --</option>
+                    <option>Diệp Phi Long - Lớp 3A3</option>
+                    <option>Nguyễn Thị B - Lớp 7B2</option>
+                  </select>
+                </label>
+
+                <div class="form-row">
+                  <label style="flex: 1">
+                    <span>Từ ngày</span>
+                    <input type="date" required />
+                  </label>
+                  <label style="flex: 1">
+                    <span>Đến ngày</span>
+                    <input type="date" required />
+                  </label>
+                </div>
+
+                <label>
+                  <span>Buổi</span>
+                  <div class="radio-group">
+                    <label class="radio-wrapper">
+                      <input type="radio" name="session" value="morning" />
+                      Sáng
+                    </label>
+                    <label class="radio-wrapper">
+                      <input type="radio" name="session" value="afternoon" />
+                      Chiều
+                    </label>
+                    <label class="radio-wrapper">
+                      <input type="radio" name="session" value="fullday" checked />
+                      Cả ngày
+                    </label>
+                  </div>
+                </label>
+
+                <label>
+                  <span>Lý do</span>
+                  <textarea
+                    rows="5"
+                    placeholder="Nhập lý do xin phép..."
+                    required
+                  ></textarea>
+                </label>
+
+                <label>
+                  <span>Đính kèm giấy tờ (nếu có)</span>
+                  <input type="file" accept=".pdf,.jpg,.jpeg,.png" multiple />
+                  <small style="color: var(--text-secondary); margin-top: 0.25rem; display: block"
+                    >Giấy khám bệnh, giấy xác nhận, v.v...</small
+                  >
+                </label>
+
+                <div class="alert info">
+                  <div class="alert-icon">ℹ️</div>
+                  <div class="alert-content">
+                    <div class="alert-message">
+                      Đơn xin phép sẽ được gửi đến giáo viên chủ nhiệm để xét
+                      duyệt. Bạn sẽ nhận được thông báo khi đơn được phê duyệt.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="button" class="btn ghost">Lưu nháp</button>
+                  <button type="submit" class="btn primary">
+                    <span class="material-symbols-outlined">send</span>
+                    Gửi đơn xin phép
+                  </button>
+                </div>
+              </form>
+            </section>
+          </div>
+
+          <!-- Lịch sử đơn -->
+          <div class="dashboard-right">
+            <section class="panel">
+              <h3>
+                <span class="material-symbols-outlined">history</span>
+                Lịch sử đơn xin phép
+              </h3>
+
+              <div class="leave-request-list">
+                <!-- Pending -->
+                <div class="leave-request-item pending">
+                  <div class="request-header">
+                    <span class="request-type">Xin phép vắng mặt</span>
+                    <span class="badge warning">Chờ duyệt</span>
+                  </div>
+                  <div class="request-info">
+                    <div class="request-student">
+                      <strong>Diệp Phi Long</strong> - Lớp 3A3
+                    </div>
+                    <div class="request-date">
+                      <span class="material-symbols-outlined">calendar_today</span>
+                      15/11/2025 - Cả ngày
+                    </div>
+                    <div class="request-reason">Lý do: Ốm, có giấy khám bệnh</div>
+                  </div>
+                  <div class="request-meta">
+                    <span>Gửi lúc: 13/11/2025 10:30</span>
+                  </div>
+                </div>
+
+                <!-- Approved -->
+                <div class="leave-request-item approved">
+                  <div class="request-header">
+                    <span class="request-type">Xin phép đi trễ</span>
+                    <span class="badge success">Đã duyệt</span>
+                  </div>
+                  <div class="request-info">
+                    <div class="request-student">
+                      <strong>Diệp Phi Long</strong> - Lớp 3A3
+                    </div>
+                    <div class="request-date">
+                      <span class="material-symbols-outlined">calendar_today</span>
+                      10/11/2025 - Buổi sáng
+                    </div>
+                    <div class="request-reason">Lý do: Đi khám bệnh</div>
+                  </div>
+                  <div class="request-meta">
+                    <span>Duyệt bởi: GV Bùi Duy Luận</span>
+                    <span>08/11/2025 14:20</span>
+                  </div>
+                </div>
+
+                <!-- Rejected -->
+                <div class="leave-request-item rejected">
+                  <div class="request-header">
+                    <span class="request-type">Xin phép vắng mặt</span>
+                    <span class="badge danger">Từ chối</span>
+                  </div>
+                  <div class="request-info">
+                    <div class="request-student">
+                      <strong>Diệp Phi Long</strong> - Lớp 3A3
+                    </div>
+                    <div class="request-date">
+                      <span class="material-symbols-outlined">calendar_today</span>
+                      05/11/2025 - Cả ngày
+                    </div>
+                    <div class="request-reason">
+                      Lý do: Đi ăn cưới
+                    </div>
+                    <div class="request-note">
+                      <strong>Ghi chú từ GV:</strong> Trùng ngày kiểm tra giữa kỳ,
+                      không thể phê duyệt.
+                    </div>
+                  </div>
+                  <div class="request-meta">
+                    <span>Từ chối bởi: GV Bùi Duy Luận</span>
+                    <span>03/11/2025 09:15</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+      document
+        .getElementById("leaveRequestForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (confirm("Bạn có chắc muốn gửi đơn xin phép này?")) {
+            alert("Đơn xin phép đã được gửi thành công!");
+            this.reset();
+          }
+        });
+    </script>
+  </body>
+</html>

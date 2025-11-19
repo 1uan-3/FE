@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./imgs/Logo (2).png" type="image/icon" />
+    <title>VieLMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-home" id="home">
+      <div class="container">
+        <div class="nav">
+          <a class="logo" href="#home">
+            <img src="./imgs/logo3.png" alt="VieLogo" />
+            <div><strong>VieLMS</strong></div>
+          </a>
+          <nav class="nav-bar-menu">
+            <a href="#home">Trang chủ</a>
+            <a href="#features">Tính năng</a>
+            <a href="#contact">Liên hệ</a>
+          </nav>
+          <div class="nav-cta">
+            <a class="btn primary" href="login.html">Đăng nhập</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Main -->
+    <main>
+      <!-- Section One -->
+      <section class="section-one" id="home">
+        <div class="container section-grid">
+          <div class="section-desc">
+            <span>Giải pháp quản lý trường học hiện đại</span>
+            <h1>Quản trị trường học toàn diện trải nghiệm hiện đại</h1>
+            <p>
+              Hệ thống quản lý trường học VieLMS cung cấp giải pháp toàn diện
+              cho việc quản lý học sinh, giáo viên, điểm số, chuyên cần và thông
+              báo.
+            </p>
+            <div class="section-actions">
+              <a class="btn primary" href="login.html">Đăng nhập ngay</a>
+              <a class="btn ghost" href="#features">Tìm hiểu thêm</a>
+            </div>
+            <div class="section-content">
+              <div><strong>05+</strong><span>Vai trò được tối ưu</span></div>
+              <div><strong>24/7</strong><span>Hỗ trợ trực tuyến</span></div>
+              <div><strong>100%</strong><span>Bảo mật dữ liệu</span></div>
+            </div>
+          </div>
+          
+          <!-- Slider -->
+          <div class="home-slider">
+            <div class="slider-container">
+              <div class="slide active">
+                <div class="slide-content">
+                  <img src="./imgs/slider-1.png" alt="slider">
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <img src="" alt="">
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slider Controls -->
+            <button class="slider-btn prev" onclick="moveSlide(-1)">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next" onclick="moveSlide(1)">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+              <span class="dot active" onclick="currentSlide(0)"></span>
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+          <!-- End Slider -->
+        </div>
+      </section>
+      <!-- End Section One -->
+      <!-- Section Two -->
+      <section class="section-two" id="features">
+        <div class="container">
+          <div class="section-desc">
+            <h2>Tính năng nổi bật</h2>
+            <p>
+              VieLMS cung cấp giải pháp toàn diện để quản lý hiệu quả mọi hoạt
+              động học tập
+            </p>
+          </div>
+          <div class="section-content">
+            <article>
+              <span class="pill">Quản lý học sinh</span>
+              <p>
+                Theo dõi thông tin học sinh, nhập và xuất dữ liệu điểm, chuyên
+                cần, xếp loại học lực tự động.
+              </p>
+            </article>
+
+            <article>
+              <span class="pill">Điểm danh thông minh</span>
+              <p>
+                Điểm danh từng buổi học, gửi thông báo tự động đến phụ huynh khi
+                học sinh vắng.
+              </p>
+            </article>
+
+            <article>
+              <span class="pill">Sổ điểm điện tử</span>
+              <p>
+                Giáo viên dễ dàng nhập điểm, xem thống kê theo môn, học kỳ, lớp,
+                hỗ trợ xuất file PDF.
+              </p>
+            </article>
+
+            <article>
+              <span class="pill">Hệ thống thông báo</span>
+              <p>
+                Ban giám hiệu và giáo viên gửi thông báo đến học sinh, phụ huynh
+                nhanh chóng qua hệ thống VieLMS.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- End Section Two -->
+      <!-- Section Three -->
+      <section class="section-three" id="section-three">
+        <div class="container">
+          <div class="section-desc">
+            <h2>Dành cho mọi vai trò</h2>
+            <p>VieLMS đáp ứng nhu cầu của tất cả người dùng trong trường học</p>
+          </div>
+
+          <div class="section-three">
+            <div class="section-desc">
+              <h3>Ban Giám Hiệu</h3>
+              <ul>
+                <li>Xem KPI toàn trường theo thời gian thực</li>
+                <li>Quản lý giáo viên và lớp học</li>
+                <li>Xem báo cáo thống kê và cảnh báo học lực</li>
+              </ul>
+            </div>
+
+            <div class="section-desc">
+              <h3>Giáo viên</h3>
+              <ul>
+                <li>Điểm danh học sinh theo buổi</li>
+                <li>Nhập điểm, quản lý sổ điểm điện tử</li>
+                <li>Gửi thông báo đến phụ huynh</li>
+              </ul>
+            </div>
+
+            <div class="section-desc">
+              <h3>Học sinh</h3>
+              <ul>
+                <li>Xem điểm số, chuyên cần, thông báo từ giáo viên</li>
+                <li>Gửi yêu cầu xin phép vắng học</li>
+                <li>Cập nhật lịch học hàng tuần</li>
+              </ul>
+            </div>
+
+            <div class="section-desc">
+              <h3>Phụ huynh</h3>
+              <ul>
+                <li>Theo dõi tiến độ học tập của con</li>
+                <li>Nhận cảnh báo chuyên cần và học lực</li>
+                <li>Liên hệ giáo viên qua hệ thống</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section Three -->
+      <!-- Section Four -->
+      <section class="section-four" id="contact">
+        <div class="container">
+          <h2>Liên hệ với VieLMS</h2>
+          <p>
+            Hãy để chúng tôi hỗ trợ bạn trong hành trình chuyển đổi số giáo dục
+          </p>
+          <form class="compose" style="margin-top: 2rem; max-width: 600px">
+            <label
+              ><span>Họ và tên</span>
+              <input type="text" placeholder="Nhập họ tên của bạn" required
+            /></label>
+            <label
+              ><span>Email</span>
+              <input type="email" placeholder="email@example.com" required
+            /></label>
+            <label
+              ><span>Nội dung</span>
+              <textarea
+                rows="5"
+                placeholder="Nhập nội dung liên hệ..."
+                required
+              ></textarea>
+            </label>
+            <button type="submit" class="btn primary">Gửi tin nhắn</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- End Section Four -->
+    <!-- End Main -->
+    <!-- Footer -->
+    <footer class="footer-home">
+      <div class="container footer-grid">
+        <div class="footer-logo">
+          <img src="./imgs/logo3.png" alt="" />
+          <h3>VieLMS</h3>
+          <p>
+            Hệ thống quản lý học tập giúp kết nối nhà trường, giáo
+            viên, học sinh và phụ huynh.
+          </p>
+        </div>
+        <div class="footer-links ">
+          <h4>Liên kết nhanh</h4>
+          <ul>
+            <li><a href="#section-one">Trang chủ</a></li>
+            <li><a href="#section-two">Tính năng</a></li>
+            <li><a href="#section-three">Vai trò</a></li>
+            <li><a href="#section-four">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-social ">
+          <h4>Kết nối với chúng tôi</h4>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" title="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="https://youtube.com" target="_blank" title="YouTube"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="https://instagram.com" target="_blank" title="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://tiktok.com" target="_blank" title="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 VieLMS | Hệ thống Quản lý học sinh</p>
+      </div>
+    </footer>
+
+    <!-- End Footer -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

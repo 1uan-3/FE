@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thời khóa biểu - VieLMS</title>
+    <link rel="icon" href="./imgs/Logo (2).png" type="image/icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+  </head>
+  <body>
+    <header class="header-schedule">
+      <div class="container">
+        <a class="logo" href="index.html">
+          <img src="./imgs/logo3.png" alt="VieLogo">
+          <div><strong>VieLMS</strong></div>
+        </a>
+      </div>
+    </header>
+    <div class="body-schedule">
+      <aside class="sidebar">
+        <nav>
+           <a href="parent.html"
+            ><span class="material-symbols-outlined">home</span>Con của tôi</a
+          >
+          <a href="parent-score.html"
+            ><span class="material-symbols-outlined">school</span>Bảng điểm</a
+          >
+          <a href="parent-attendance.html"
+            ><span class="material-symbols-outlined">task_alt</span>Chuyên cần</a
+          >
+          <a href="leave-request.html"
+            ><span class="material-symbols-outlined">event_busy</span>Xin phép vắng/trễ</a
+          >
+          <a class="active" href="parent-schedule.html"
+            ><span class="material-symbols-outlined">calendar_today</span>Thời khóa biểu</a
+          >
+          <!-- <a href="inbox.html"
+            ><span class="material-symbols-outlined">mail</span>Hợp thư</a
+          > -->
+          <a href="parent-notifications.html"
+            ><span class="material-symbols-outlined">notifications</span>Thông báo</a
+          >
+          <a href="logout.html"
+            ><span class="material-symbols-outlined">logout</span>Đăng xuất</a
+          >
+        </nav>
+      </aside>
+
+      <main class="content-schedule">
+        <section class="schedule-header-section">
+          <h1 class="schedule-title">THỜI KHÓA BIỂU</h1>
+          <div class="schedule-info">
+            <div class="info-item">
+              <strong>LỚP:</strong> <span id="className">3A1</span>
+            </div>
+            <div class="info-item">
+              <strong>Năm học:</strong> <span id="schoolYear">2024 - 2025</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel schedule-table-section">
+          <table class="schedule-table-colorful">
+            <thead>
+              <tr>
+                <th class="session-col">Buổi</th>
+                <th class="period-col">Tiết</th>
+                <th>Thứ hai</th>
+                <th>Thứ ba</th>
+                <th>Thứ tư</th>
+                <th>Thứ năm</th>
+                <th>Thứ sáu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Buổi sáng -->
+              <tr>
+                <td rowspan="5" class="session-cell">Sáng</td>
+                <td class="period-cell">1</td>
+                <td class="subject-cell">Chào cờ</td>
+                <td class="subject-cell">Toán</td>
+                <td class="subject-cell">Giáo dục thể chất</td>
+                <td class="subject-cell">Toán</td>
+                <td class="subject-cell">Toán</td>
+              </tr>
+              <tr>
+                <td class="period-cell">2</td>
+                <td class="subject-cell">Toán</td>
+                <td class="subject-cell">Tiếng Việt</td>
+                <td class="subject-cell">Toán</td>
+                <td class="subject-cell">Nghệ huật</td>
+                <td class="subject-cell">Lịch sử và Địa lý</td>
+              </tr>
+              <tr>
+                <td colspan="6" class="break-cell">RA CHƠI</td>
+              </tr>
+              <tr>
+                <td class="period-cell">3</td>
+                <td class="subject-cell">Tiếng Việt</td>
+                <td class="subject-cell">Ngoại ngữ 1</td>
+                <td class="subject-cell">Tiếng Việt</td>
+                <td class="subject-cell">Toán</td>
+                <td class="subject-cell">Lịch sử và Địa lý</td>
+              </tr>
+              <tr>
+                <td class="period-cell">4</td>
+                <td class="subject-cell">Giáo dục thể chất</td>
+                <td class="subject-cell">Tiếng Việt</td>
+                <td class="subject-cell">Tự nhiên xã hội</td>
+                <td class="subject-cell">Toán</td>
+                <td class="subject-cell">Đạo đức</td>
+              </tr>
+              
+              <!-- Buổi chiều -->
+              <tr>
+                <td rowspan="3" class="session-cell">Chiều</td>
+                <td class="period-cell">1</td>
+                <td class="subject-cell">Ngoại ngữ 1</td>
+                <td class="subject-cell">Tiếng Việt</td>
+                <td class="subject-cell">Tin học </td>
+                <td class="subject-cell">Toán</td>
+                <td class="subject-cell">Tự nhiên và xã hội</td>
+              </tr>
+              <tr>
+                <td class="period-cell">2</td>
+                <td class="subject-cell">Tiếng Anh</td>
+                <td class="subject-cell">Toán</td>
+                <td class="subject-cell">Toán</td>
+                <td class="subject-cell">Tiếng Việt</td>
+                <td class="subject-cell">Tin Học</td>
+              </tr>
+              <tr>
+                <td class="period-cell">3</td>
+                <td class="subject-cell">Công Nghệ</td>
+                <td class="subject-cell">Hoạt động trải nghiệm</td>
+                <td class="subject-cell">Ngoại ngữ 1</td>
+                <td class="subject-cell">Đạo Đức</td>
+                <td class="subject-cell">Sinh hoạt lớp</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
