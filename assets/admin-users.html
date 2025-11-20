@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS - Quản lý người dùng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header-schoolboard">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="./imgs/logo3.png" alt="VieLogo">
+                <div><strong>VieLMS Admin</strong></div>
+            </a>
+            <div class="user-menu">
+                <span>Xin chào, <strong>Admin</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="body-schoolboard">
+        <aside class="sidebar">
+            <nav>
+                <a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Tổng quan</a>
+                <a class="active" href="admin-users.html"><span
+                        class="material-symbols-outlined">manage_accounts</span>Quản lý người dùng</a>
+                <a href="admin-settings.html"><span class="material-symbols-outlined">settings</span>Cấu hình hệ
+                    thống</a>
+                <a href="admin-logs.html"><span class="material-symbols-outlined">history</span>Nhật ký hoạt động</a>
+                <a href="admin-backup.html"><span class="material-symbols-outlined">backup</span>Sao lưu & Phục hồi</a>
+                <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <main class="content-schoolboard">
+            <section class="panel">
+                <div class="shell-title">
+                    <h2>Quản lý người dùng</h2>
+                    <p>Danh sách và phân quyền người dùng trong hệ thống</p>
+                </div>
+
+                <div class="filters section-spacing">
+                    <div class="filter-group">
+                        <input type="search" placeholder="Tìm kiếm theo tên, email, ID..." class="input-medium"
+                            style="min-width: 300px;" />
+                        <select>
+                            <option value="">Tất cả vai trò</option>
+                            <option value="schoolboard">Ban Giám Hiệu</option>
+                            <option value="teacher">Giáo viên</option>
+                            <option value="student">Học sinh</option>
+                            <option value="parent">Phụ huynh</option>
+                        </select>
+                        <select>
+                            <option value="">Tất cả trạng thái</option>
+                            <option value="active">Đang hoạt động</option>
+                            <option value="locked">Đã khóa</option>
+                            <option value="pending">Chờ duyệt</option>
+                        </select>
+                    </div>
+                    <div class="action-group">
+                        <button class="btn primary"><span class="material-symbols-outlined">add</span> Thêm mới</button>
+                        <button class="btn ghost"><span class="material-symbols-outlined">upload</span> Nhập
+                            Excel</button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>ID</th>
+                            <th>Họ tên</th>
+                            <th>Thông tin liên hệ</th>
+                            <th>Vai trò</th>
+                            <th>Trạng thái</th>
+                            <th>Lần đăng nhập cuối</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>#U001</td>
+                            <td>
+                                <strong>Nguyễn Văn Admin</strong>
+                                <div class="text-muted text-small">Nam - 01/01/1980</div>
+                            </td>
+                            <td>
+                                <div>admin@vielms.edu.vn</div>
+                                <div>0909123456</div>
+                            </td>
+                            <td><span class="badge accent">Admin</span></td>
+                            <td><span class="text-success">Hoạt động</span></td>
+                            <td>10:30 19/11/2024</td>
+                            <td>
+                                <button class="btn icon-only" title="Chỉnh sửa"><span
+                                        class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only" title="Khóa tài khoản"><span
+                                        class="material-symbols-outlined">lock</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>#U002</td>
+                            <td>
+                                <strong>Trần Hiệu Trưởng</strong>
+                                <div class="text-muted text-small">Nam - 15/08/1975</div>
+                            </td>
+                            <td>
+                                <div>hieutruong@vielms.edu.vn</div>
+                                <div>0912345678</div>
+                            </td>
+                            <td><span class="badge">Ban Giám Hiệu</span></td>
+                            <td><span class="text-success">Hoạt động</span></td>
+                            <td>09:15 19/11/2024</td>
+                            <td>
+                                <button class="btn icon-only" title="Chỉnh sửa"><span
+                                        class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only" title="Khóa tài khoản"><span
+                                        class="material-symbols-outlined">lock</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>#U003</td>
+                            <td>
+                                <strong>Lê Giáo Viên</strong>
+                                <div class="text-muted text-small">Nữ - 20/11/1990</div>
+                            </td>
+                            <td>
+                                <div>gv01@vielms.edu.vn</div>
+                                <div>0987654321</div>
+                            </td>
+                            <td><span class="badge">Giáo viên</span></td>
+                            <td><span class="text-warning">Chờ duyệt</span></td>
+                            <td>-</td>
+                            <td>
+                                <button class="btn icon-only" title="Chỉnh sửa"><span
+                                        class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only" title="Duyệt"><span
+                                        class="material-symbols-outlined">check</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>#U004</td>
+                            <td>
+                                <strong>Phạm Học Sinh</strong>
+                                <div class="text-muted text-small">Nam - 05/05/2015</div>
+                            </td>
+                            <td>
+                                <div>hs01@vielms.edu.vn</div>
+                                <div>-</div>
+                            </td>
+                            <td><span class="badge">Học sinh</span></td>
+                            <td><span class="text-danger">Đã khóa</span></td>
+                            <td>15/01/2024</td>
+                            <td>
+                                <button class="btn icon-only" title="Chỉnh sửa"><span
+                                        class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only" title="Mở khóa"><span
+                                        class="material-symbols-outlined">lock_open</span></button>
+                            </td>
+                        </tr>
+                        <!-- More rows as needed -->
+                    </tbody>
+                </table>
+
+                <div class="pagination" style="margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px;">
+                    <button class="btn ghost small" disabled>Trước</button>
+                    <button class="btn primary small">1</button>
+                    <button class="btn ghost small">2</button>
+                    <button class="btn ghost small">3</button>
+                    <button class="btn ghost small">Sau</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <style>
+        .text-small {
+            font-size: 0.85rem;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .action-group {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+
+        .filters {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .icon-only {
+            padding: 4px 8px;
+        }
+    </style>
+</body>
+
+</html>

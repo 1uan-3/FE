@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS - Cấu hình hệ thống</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header-schoolboard">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="./imgs/logo3.png" alt="VieLogo">
+                <div><strong>VieLMS Admin</strong></div>
+            </a>
+            <div class="user-menu">
+                <span>Xin chào, <strong>Admin</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="body-schoolboard">
+        <aside class="sidebar">
+            <nav>
+                <a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Tổng quan</a>
+                <a href="admin-users.html"><span class="material-symbols-outlined">manage_accounts</span>Quản lý người
+                    dùng</a>
+                <a class="active" href="admin-settings.html"><span class="material-symbols-outlined">settings</span>Cấu
+                    hình hệ thống</a>
+                <a href="admin-logs.html"><span class="material-symbols-outlined">history</span>Nhật ký hoạt động</a>
+                <a href="admin-backup.html"><span class="material-symbols-outlined">backup</span>Sao lưu & Phục hồi</a>
+                <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <main class="content-schoolboard">
+            <section class="panel">
+                <div class="shell-title">
+                    <h2>Cấu hình hệ thống</h2>
+                    <p>Thiết lập các thông số vận hành cho toàn bộ hệ thống</p>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab-btn active">Thông tin chung</button>
+                    <button class="tab-btn">Học vụ</button>
+                    <button class="tab-btn">Bảo mật</button>
+                    <button class="tab-btn">Email & Thông báo</button>
+                </div>
+
+                <div class="tab-content active">
+                    <h3 class="section-title">Thông tin trường học</h3>
+                    <form class="form-medium">
+                        <div class="form-row">
+                            <label>
+                                <span>Tên trường</span>
+                                <input type="text" value="Trường Tiểu học VieLMS" />
+                            </label>
+                            <label>
+                                <span>Mã trường</span>
+                                <input type="text" value="VIELMS001" disabled />
+                            </label>
+                        </div>
+                        <label>
+                            <span>Địa chỉ</span>
+                            <input type="text" value="123 Đường ABC, Quận XYZ, TP.HCM" />
+                        </label>
+                        <div class="form-row">
+                            <label>
+                                <span>Số điện thoại</span>
+                                <input type="tel" value="028 1234 5678" />
+                            </label>
+                            <label>
+                                <span>Email liên hệ</span>
+                                <input type="email" value="contact@vielms.edu.vn" />
+                            </label>
+                        </div>
+                        <label>
+                            <span>Logo nhà trường</span>
+                            <div class="file-upload">
+                                <img src="./imgs/logo3.png" alt="Current Logo"
+                                    style="height: 50px; margin-right: 10px;">
+                                <button class="btn ghost small">Thay đổi logo</button>
+                            </div>
+                        </label>
+                    </form>
+
+                    <h3 class="section-title" style="margin-top: 2rem;">Giao diện</h3>
+                    <form class="form-medium">
+                        <label>
+                            <span>Màu chủ đạo</span>
+                            <input type="color" value="#2196F3" style="height: 40px; width: 100%;">
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked>
+                            <span>Hiển thị thông báo chào mừng khi đăng nhập</span>
+                        </label>
+                    </form>
+
+                    <div class="form-actions" style="margin-top: 2rem;">
+                        <button class="btn primary">Lưu thay đổi</button>
+                        <button class="btn ghost">Hủy bỏ</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <style>
+        .tabs {
+            display: flex;
+            gap: 10px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color, #2196F3);
+            border-bottom-color: var(--primary-color, #2196F3);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row label {
+            flex: 1;
+        }
+
+        .section-title {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .checkbox-label input {
+            width: auto;
+            margin: 0;
+        }
+    </style>
+</body>
+
+</html>

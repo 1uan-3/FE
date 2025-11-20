@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS - Quản trị hệ thống</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header-schoolboard">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="./imgs/logo3.png" alt="VieLogo">
+                <div><strong>VieLMS</strong></div>
+            </a>
+            <div class="user-menu">
+                <span>Xin chào</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="body-schoolboard">
+        <aside class="sidebar">
+            <nav>
+                <a class="active" href="admin.html"><span class="material-symbols-outlined">dashboard</span>Tổng
+                    quan</a>
+                <a href="admin-users.html"><span class="material-symbols-outlined">manage_accounts</span>Quản lý người
+                    dùng</a>
+                <a href="admin-settings.html"><span class="material-symbols-outlined">settings</span>Cấu hình hệ
+                    thống</a>
+                <a href="admin-logs.html"><span class="material-symbols-outlined">history</span>Nhật ký hoạt động</a>
+                <a href="admin-backup.html"><span class="material-symbols-outlined">backup</span>Sao lưu & Phục hồi</a>
+                <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <main class="content-schoolboard">
+            <section class="panel">
+                <div class="shell-title">
+                    <h2>Tổng quan hệ thống</h2>
+                    <p>Trạng thái hoạt động và thống kê tài nguyên</p>
+                </div>
+
+                <div class="kpi-cards">
+                    <div class="card">
+                        <span>Tổng người dùng</span>
+                        <strong class="large">2,450</strong>
+                    </div>
+                    <div class="card">
+                        <span>Đang truy cập</span>
+                        <strong class="large success">128</strong>
+                    </div>
+                    <div class="card">
+                        <span>Tình trạng hệ thống</span>
+                        <strong class="large success">Tốt</strong>
+                    </div>
+                    <div class="card">
+                        <span>Dung lượng lưu trữ</span>
+                        <strong class="large warning">75%</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h3>Quản lý người dùng</h3>
+                <div class="filters section-spacing">
+                    <input type="search" placeholder="Tìm kiếm người dùng..." class="input-medium" />
+                    <select>
+                        <option value="">Tất cả vai trò</option>
+                        <option value="schoolboard">Ban Giám Hiệu</option>
+                        <option value="teacher">Giáo viên</option>
+                        <option value="student">Học sinh</option>
+                        <option value="parent">Phụ huynh</option>
+                    </select>
+                    <select>
+                        <option value="">Tất cả trạng thái</option>
+                        <option value="active">Đang hoạt động</option>
+                        <option value="locked">Đã khóa</option>
+                    </select>
+                    <button class="btn primary">Thêm người dùng mới</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Họ tên</th>
+                            <th>Email/Tên đăng nhập</th>
+                            <th>Vai trò</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày tạo</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#U001</td>
+                            <td><strong>Trần Văn A</strong></td>
+                            <td>admin@vielms.edu.vn</td>
+                            <td><span class="badge accent">Admin</span></td>
+                            <td><span class="text-success">Hoạt động</span></td>
+                            <td>01/01/2024</td>
+                            <td>
+                                <button class="btn icon-only"><span
+                                        class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only"><span
+                                        class="material-symbols-outlined">lock</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#U002</td>
+                            <td><strong>Diệp Phi Long</strong></td>
+                            <td>hieutruong@vielms.edu.vn</td>
+                            <td><span class="badge">Ban Giám Hiệu</span></td>
+                            <td><span class="text-success">Hoạt động</span></td>
+                            <td>05/01/2024</td>
+                            <td>
+                                <button class="btn icon-only"><span
+                                        class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only"><span
+                                        class="material-symbols-outlined">lock</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#U003</td>
+                            <td><strong>Bùi Duy Luận</strong></td>
+                            <td>gv01@vielms.edu.vn</td>
+                            <td><span class="badge">Giáo viên</span></td>
+                            <td><span class="text-warning">Chờ duyệt</span></td>
+                            <td>10/01/2024</td>
+                            <td>
+                                <button class="btn icon-only"><span
+                                        class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only"><span
+                                        class="material-symbols-outlined">check</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#U004</td>
+                            <td><strong>Phạm Học Sinh</strong></td>
+                            <td>hs01@vielms.edu.vn</td>
+                            <td><span class="badge">Học sinh</span></td>
+                            <td><span class="text-danger">Đã khóa</span></td>
+                            <td>15/01/2024</td>
+                            <td>
+                                <button class="btn icon-only"><span
+                                        class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only"><span
+                                        class="material-symbols-outlined">lock_open</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="panel">
+                <h3>Cấu hình hệ thống</h3>
+                <div class="form-medium section-spacing">
+                    <div class="setting-item"
+                        style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #eee;">
+                        <div>
+                            <strong>Chế độ bảo trì</strong>
+                            <p class="text-muted" style="font-size: 0.9rem;">Chỉ Admin mới có thể truy cập hệ thống</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item"
+                        style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #eee;">
+                        <div>
+                            <strong>Cho phép đăng ký mới</strong>
+                            <p class="text-muted" style="font-size: 0.9rem;">Cho phép người dùng tự đăng ký tài khoản
+                            </p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item"
+                        style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+                        <div>
+                            <strong>Niên khóa hiện tại</strong>
+                            <p class="text-muted" style="font-size: 0.9rem;">Thiết lập niên khóa mặc định cho toàn hệ
+                                thống</p>
+                        </div>
+                        <select class="input-medium">
+                            <option>2024-2025</option>
+                            <option>2023-2024</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn primary">Lưu cấu hình</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h3>Nhật ký hoạt động gần đây</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Thời gian</th>
+                            <th>Người dùng</th>
+                            <th>Hành động</th>
+                            <th>Chi tiết</th>
+                            <th>IP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:30 19/11/2024</td>
+                            <td><strong>Trần Văn A</strong></td>
+                            <td>Đăng nhập</td>
+                            <td>Đăng nhập thành công vào trang quản trị</td>
+                            <td>192.168.1.1</td>
+                        </tr>
+                        <tr>
+                            <td>09:15 19/11/2024</td>
+                            <td><strong>Diệp Phi Long</strong></td>
+                            <td>Cập nhật điểm</td>
+                            <td>Phê duyệt bảng điểm khối 5</td>
+                            <td>192.168.1.15</td>
+                        </tr>
+                        <tr>
+                            <td>08:00 19/11/2024</td>
+                            <td><strong>Hệ thống</strong></td>
+                            <td>Sao lưu tự động</td>
+                            <td>Sao lưu cơ sở dữ liệu thành công</td>
+                            <td>Localhost</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <style>
+        /* Simple switch toggle style for this page specifically if not in global css */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: var(--primary-color, #2196F3);
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px var(--primary-color, #2196F3);
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        .icon-only {
+            padding: 4px 8px;
+            font-size: 18px;
+        }
+    </style>
+</body>
+
+</html>
