@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS - Quản lý thông báo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header-admin">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="./imgs/logo3.png" alt="VieLogo">
+                <div><strong>VieLMS</strong></div>
+            </a>
+        </div>
+    </header>
+
+    <div class="body-admin">
+        <aside class="sidebar">
+            <nav>
+                <a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Tổng quan</a>
+                <a href="admin-users.html"><span class="material-symbols-outlined">manage_accounts</span>Quản lý người dùng</a>
+                <a href="admin-class.html"><span class="material-symbols-outlined">school</span>Quản lý lớp học</a>
+                <a href="admin-student.html"><span class="material-symbols-outlined">group</span>Quản lý học sinh</a>
+                <a href="admin-teacher.html"><span class="material-symbols-outlined">person</span>Quản lý giáo viên</a>
+                <a href="admin-score.html"><span class="material-symbols-outlined">grade</span>Quản lý điểm số</a>
+                <a href="admin-attendance.html"><span class="material-symbols-outlined">task_alt</span>Quản lý chuyên cần</a>
+                <a class="active" href="admin-notification.html"><span class="material-symbols-outlined">notifications</span>Quản lý thông báo</a>
+                <a href="admin-report.html"><span class="material-symbols-outlined">assessment</span>Quản lý báo cáo</a>
+                <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <main class="content-admin">
+            <section class="panel">
+                <div class="shell-title">
+                    <h2>Quản lý thông báo</h2>
+                    <p>Tạo và quản lý thông báo gửi đến người dùng</p>
+                </div>
+
+                <div class="filters section-spacing">
+                    <div class="filter-group">
+                        <input type="search" placeholder="Tìm kiếm thông báo..." class="input-medium" />
+                        <select>
+                            <option value="">Tất cả đối tượng</option>
+                            <option value="all">Toàn trường</option>
+                            <option value="teacher">Giáo viên</option>
+                            <option value="student">Học sinh</option>
+                            <option value="parent">Phụ huynh</option>
+                        </select>
+                        <select>
+                            <option value="">Mức độ</option>
+                            <option value="normal">Bình thường</option>
+                            <option value="important">Quan trọng</option>
+                            <option value="urgent">Khẩn cấp</option>
+                        </select>
+                    </div>
+                    <div class="action-group">
+                        <button class="btn primary" onclick="openAddNotificationModal()">
+                            <span class="material-symbols-outlined">add</span> Tạo thông báo
+                        </button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tiêu đề</th>
+                            <th>Đối tượng</th>
+                            <th>Mức độ</th>
+                            <th>Ngày tạo</th>
+                            <th>Người tạo</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>#TB001</strong></td>
+                            <td>Họp phụ huynh học kỳ 1</td>
+                            <td>Phụ huynh</td>
+                            <td><span class="badge warning">Quan trọng</span></td>
+                            <td>20/11/2024</td>
+                            <td>Admin</td>
+                            <td><span class="text-success">Đã gửi</span></td>
+                            <td>
+                                <button class="btn icon-only" title="Xem"><span class="material-symbols-outlined">visibility</span></button>
+                                <button class="btn icon-only" title="Sửa" onclick="editNotification('TB001')"><span class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only text-danger" title="Xóa" onclick="deleteNotification('TB001')"><span class="material-symbols-outlined">delete</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#TB002</strong></td>
+                            <td>Lịch nghỉ Tết Nguyên Đán 2025</td>
+                            <td>Toàn trường</td>
+                            <td><span class="badge accent">Khẩn cấp</span></td>
+                            <td>18/11/2024</td>
+                            <td>Admin</td>
+                            <td><span class="text-success">Đã gửi</span></td>
+                            <td>
+                                <button class="btn icon-only" title="Xem"><span class="material-symbols-outlined">visibility</span></button>
+                                <button class="btn icon-only" title="Sửa" onclick="editNotification('TB002')"><span class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only text-danger" title="Xóa" onclick="deleteNotification('TB002')"><span class="material-symbols-outlined">delete</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#TB003</strong></td>
+                            <td>Thông báo nộp học phí đợt 2</td>
+                            <td>Phụ huynh</td>
+                            <td><span class="badge">Bình thường</span></td>
+                            <td>15/11/2024</td>
+                            <td>Admin</td>
+                            <td><span class="text-warning">Chờ gửi</span></td>
+                            <td>
+                                <button class="btn icon-only" title="Xem"><span class="material-symbols-outlined">visibility</span></button>
+                                <button class="btn icon-only" title="Sửa" onclick="editNotification('TB003')"><span class="material-symbols-outlined">edit</span></button>
+                                <button class="btn icon-only text-danger" title="Xóa" onclick="deleteNotification('TB003')"><span class="material-symbols-outlined">delete</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination">
+                    <button class="btn ghost small" disabled>Trước</button>
+                    <button class="btn primary small">1</button>
+                    <button class="btn ghost small">2</button>
+                    <button class="btn ghost small">Sau</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Tạo/Sửa Thông báo -->
+    <div id="notificationModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Tạo thông báo mới</h3>
+                <button class="btn icon-only" onclick="closeNotificationModal()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <form class="form-medium">
+                <label>
+                    <span>Tiêu đề <span class="text-danger">*</span></span>
+                    <input type="text" id="notiTitle" required placeholder="Nhập tiêu đề thông báo" />
+                </label>
+                <div class="form-row">
+                    <label>
+                        <span>Đối tượng nhận <span class="text-danger">*</span></span>
+                        <select id="notiTarget" required>
+                            <option value="">Chọn đối tượng</option>
+                            <option value="all">Toàn trường</option>
+                            <option value="teacher">Tất cả giáo viên</option>
+                            <option value="student">Tất cả học sinh</option>
+                            <option value="parent">Tất cả phụ huynh</option>
+                            <option value="class">Theo lớp</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Mức độ ưu tiên</span>
+                        <select id="notiPriority">
+                            <option value="normal">Bình thường</option>
+                            <option value="important">Quan trọng</option>
+                            <option value="urgent">Khẩn cấp</option>
+                        </select>
+                    </label>
+                </div>
+                <label>
+                    <span>Nội dung <span class="text-danger">*</span></span>
+                    <textarea id="notiContent" rows="5" required placeholder="Nhập nội dung thông báo..."></textarea>
+                </label>
+                <div class="form-row">
+                    <label>
+                        <span>Ngày gửi</span>
+                        <input type="datetime-local" id="notiSchedule" />
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Gửi ngay</button>
+                    <button type="button" class="btn ghost">Lưu nháp</button>
+                    <button type="button" class="btn ghost" onclick="closeNotificationModal()">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <style>
+        .form-row { display: flex; gap: 20px; }
+        .form-row label { flex: 1; }
+        .icon-only { padding: 4px 8px; }
+        .pagination { margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px; }
+        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+        .modal-content { background: white; border-radius: 8px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid #eee; }
+        .modal-header h3 { margin: 0; }
+        .modal-content form { padding: 20px; }
+        .text-danger { color: #dc3545; }
+        textarea { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; resize: vertical; }
+    </style>
+    <script>
+        function openAddNotificationModal() {
+            document.getElementById('notificationModal').style.display = 'flex';
+            document.getElementById('modalTitle').textContent = 'Tạo thông báo mới';
+        }
+        function closeNotificationModal() {
+            document.getElementById('notificationModal').style.display = 'none';
+        }
+        function editNotification(id) {
+            document.getElementById('notificationModal').style.display = 'flex';
+            document.getElementById('modalTitle').textContent = 'Chỉnh sửa thông báo';
+        }
+        function deleteNotification(id) {
+            if (confirm('Bạn có chắc chắn muốn xóa thông báo này?')) {
+                alert('Đã xóa thông báo: ' + id);
+            }
+        }
+    </script>
+</body>
+</html>

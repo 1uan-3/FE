@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header-admin">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="./imgs/logo3.png" alt="VieLogo">
+                <div><strong>VieLMS</strong></div>
+            </a>
+            <!-- <div class="user-menu">
+                <span>Xin chào, <strong>Admin</strong></span>
+            </div> -->
+        </div>
+    </header>
+
+    <div class="body-admin">
+        <aside class="sidebar">
+            <nav>
+                <a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Tổng quan</a>
+                <a href="admin-users.html"><span class="material-symbols-outlined">manage_accounts</span>Quản lý người dùng</a>
+                <a href="admin-class.html"><span class="material-symbols-outlined">school</span>Quản lý lớp học</a>
+                <a href="admin-student.html"><span class="material-symbols-outlined">group</span>Quản lý học sinh</a>
+                <a href="admin-teacher.html"><span class="material-symbols-outlined">person</span>Quản lý giáo viên</a>
+                <a class="active" href="admin-score.html"><span class="material-symbols-outlined">grade</span>Quản lý điểm số</a>
+                <a href="admin-attendance.html"><span class="material-symbols-outlined">task_alt</span>Quản lý chuyên cần</a>
+                <a href="admin-notification.html"><span class="material-symbols-outlined">notifications</span>Quản lý thông báo</a>
+                <a href="admin-report.html"><span class="material-symbols-outlined">assessment</span>Quản lý báo cáo</a>
+                <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <main class="content-admin">
+            <section class="panel">
+                <div class="shell-title">
+                    <h2>Quản lý điểm số</h2>
+                    <p>Quản lý và theo dõi điểm số của học sinh</p>
+                </div>
+
+                <div class="filters section-spacing">
+                    <div class="filter-group">
+                        <select>
+                            <option value="">Chọn lớp</option>
+                            <option value="L5A">Lớp 5A</option>
+                            <option value="L5B">Lớp 5B</option>
+                            <option value="L4A">Lớp 4A</option>
+                        </select>
+                        <select>
+                            <option value="">Chọn môn học</option>
+                            <option value="toan">Toán</option>
+                            <option value="van">Tiếng Việt</option>
+                            <option value="anh">Tiếng Anh</option>
+                            <option value="khtn">Khoa học tự nhiên</option>
+                        </select>
+                        <select>
+                            <option value="">Học kỳ</option>
+                            <option value="hk1">Học kỳ 1</option>
+                            <option value="hk2">Học kỳ 2</option>
+                        </select>
+                        <input type="search" placeholder="Tìm học sinh..." class="input-medium" />
+                    </div>
+                    <div class="action-group">
+                        <button class="btn ghost">Xuất bảng điểm</button>
+                        <button class="btn primary" onclick="openAddScoreModal()">
+                            <span class="material-symbols-outlined">add</span> Nhập điểm
+                        </button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã HS</th>
+                            <th>Họ và tên</th>
+                            <th>Lớp</th>
+                            <th>Môn học</th>
+                            <th>Điểm TX1</th>
+                            <th>Điểm TX2</th>
+                            <th>Điểm GK</th>
+                            <th>Điểm CK</th>
+                            <th>Điểm TB</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>HS001</strong></td>
+                            <td>Nguyễn Văn An</td>
+                            <td>5A</td>
+                            <td>Toán</td>
+                            <td>8.5</td>
+                            <td>9.0</td>
+                            <td>8.0</td>
+                            <td>9.5</td>
+                            <td><strong>8.8</strong></td>
+                            <td>
+                                <button class="btn icon-only" title="Chỉnh sửa" onclick="editScore('HS001', 'toan')">
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button class="btn icon-only text-danger" title="Xóa" onclick="deleteScore('HS001', 'toan')">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>HS001</strong></td>
+                            <td>Nguyễn Văn An</td>
+                            <td>5A</td>
+                            <td>Tiếng Việt</td>
+                            <td>7.5</td>
+                            <td>8.0</td>
+                            <td>8.5</td>
+                            <td>8.0</td>
+                            <td><strong>8.0</strong></td>
+                            <td>
+                                <button class="btn icon-only" title="Chỉnh sửa" onclick="editScore('HS001', 'van')">
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button class="btn icon-only text-danger" title="Xóa" onclick="deleteScore('HS001', 'van')">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>HS002</strong></td>
+                            <td>Trần Thị Bình</td>
+                            <td>5A</td>
+                            <td>Toán</td>
+                            <td>9.0</td>
+                            <td>9.5</td>
+                            <td>9.0</td>
+                            <td>10</td>
+                            <td><strong>9.4</strong></td>
+                            <td>
+                                <button class="btn icon-only" title="Chỉnh sửa" onclick="editScore('HS002', 'toan')">
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button class="btn icon-only text-danger" title="Xóa" onclick="deleteScore('HS002', 'toan')">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination" style="margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px;">
+                    <button class="btn ghost small" disabled>Trước</button>
+                    <button class="btn primary small">1</button>
+                    <button class="btn ghost small">2</button>
+                    <button class="btn ghost small">3</button>
+                    <button class="btn ghost small">Sau</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Nhập/Sửa Điểm -->
+    <div id="scoreModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Nhập điểm học sinh</h3>
+                <button class="btn icon-only" onclick="closeScoreModal()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <form class="form-medium">
+                <div class="form-row">
+                    <label>
+                        <span>Học sinh <span class="text-danger">*</span></span>
+                        <select id="scoreStudent" required>
+                            <option value="">Chọn học sinh</option>
+                            <option value="HS001">HS001 - Nguyễn Văn An</option>
+                            <option value="HS002">HS002 - Trần Thị Bình</option>
+                            <option value="HS003">HS003 - Lê Minh Châu</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Môn học <span class="text-danger">*</span></span>
+                        <select id="scoreSubject" required>
+                            <option value="">Chọn môn học</option>
+                            <option value="toan">Toán</option>
+                            <option value="van">Tiếng Việt</option>
+                            <option value="anh">Tiếng Anh</option>
+                            <option value="khtn">Khoa học tự nhiên</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>
+                        <span>Học kỳ <span class="text-danger">*</span></span>
+                        <select id="scoreSemester" required>
+                            <option value="hk1">Học kỳ 1</option>
+                            <option value="hk2">Học kỳ 2</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Năm học <span class="text-danger">*</span></span>
+                        <select id="scoreYear" required>
+                            <option value="2024-2025">2024-2025</option>
+                            <option value="2023-2024">2023-2024</option>
+                        </select>
+                    </label>
+                </div>
+                
+                <h4 style="margin-top: 20px;">Điểm số</h4>
+                <div class="form-row">
+                    <label>
+                        <span>Điểm TX1</span>
+                        <input type="number" id="scoreTX1" min="0" max="10" step="0.5" />
+                    </label>
+                    <label>
+                        <span>Điểm TX2</span>
+                        <input type="number" id="scoreTX2" min="0" max="10" step="0.5" />
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>
+                        <span>Điểm giữa kỳ</span>
+                        <input type="number" id="scoreGK" min="0" max="10" step="0.5" />
+                    </label>
+                    <label>
+                        <span>Điểm cuối kỳ</span>
+                        <input type="number" id="scoreCK" min="0" max="10" step="0.5" />
+                    </label>
+                </div>
+                <label>
+                    <span>Ghi chú</span>
+                    <textarea id="scoreNote" rows="3"></textarea>
+                </label>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Lưu điểm</button>
+                    <button type="button" class="btn ghost" onclick="closeScoreModal()">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <style>
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .action-group {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+
+        .icon-only {
+            padding: 4px 8px;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+        }
+
+        .modal-content form {
+            padding: 20px;
+        }
+
+        .modal-content h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .text-danger {
+            color: #dc3545;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row label {
+            flex: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .body-admin {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            .sidebar nav {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+
+            .sidebar nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .content-admin {
+                margin-left: 0;
+                padding: 15px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 8px 6px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .filters {
+                flex-direction: column;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .action-group {
+                margin-left: 0;
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10px;
+            }
+
+            .modal-header {
+                padding: 15px;
+            }
+
+            .modal-content form {
+                padding: 15px;
+            }
+
+            .pagination {
+                justify-content: center !important;
+                flex-wrap: wrap;
+            }
+
+            /* Table responsive */
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .shell-title h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar nav a span.material-symbols-outlined {
+                font-size: 18px;
+            }
+
+            .sidebar nav a {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+
+            .btn.icon-only {
+                padding: 4px 6px;
+            }
+
+            .shell-title h2 {
+                font-size: 1.1rem;
+            }
+
+            .shell-title p {
+                font-size: 13px;
+            }
+
+            input, select, textarea {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function openAddScoreModal() {
+            document.getElementById('scoreModal').style.display = 'flex';
+            document.getElementById('modalTitle').textContent = 'Nhập điểm học sinh';
+        }
+
+        function closeScoreModal() {
+            document.getElementById('scoreModal').style.display = 'none';
+        }
+
+        function editScore(studentId, subject) {
+            document.getElementById('scoreModal').style.display = 'flex';
+            document.getElementById('modalTitle').textContent = 'Chỉnh sửa điểm';
+            // Load data here
+        }
+
+        function deleteScore(studentId, subject) {
+            if (confirm('Bạn có chắc chắn muốn xóa điểm môn ' + subject + ' của học sinh ' + studentId + '?')) {
+                alert('Đã xóa điểm');
+            }
+        }
+    </script>
+</body>
+
+</html>

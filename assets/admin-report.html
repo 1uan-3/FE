@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS - Quản lý báo cáo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header-admin">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="./imgs/logo3.png" alt="VieLogo">
+                <div><strong>VieLMS</strong></div>
+            </a>
+        </div>
+    </header>
+
+    <div class="body-admin">
+        <aside class="sidebar">
+            <nav>
+                <a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Tổng quan</a>
+                <a href="admin-users.html"><span class="material-symbols-outlined">manage_accounts</span>Quản lý người dùng</a>
+                <a href="admin-class.html"><span class="material-symbols-outlined">school</span>Quản lý lớp học</a>
+                <a href="admin-student.html"><span class="material-symbols-outlined">group</span>Quản lý học sinh</a>
+                <a href="admin-teacher.html"><span class="material-symbols-outlined">person</span>Quản lý giáo viên</a>
+                <a href="admin-score.html"><span class="material-symbols-outlined">grade</span>Quản lý điểm số</a>
+                <a href="admin-attendance.html"><span class="material-symbols-outlined">task_alt</span>Quản lý chuyên cần</a>
+                <a href="admin-notification.html"><span class="material-symbols-outlined">notifications</span>Quản lý thông báo</a>
+                <a class="active" href="admin-report.html"><span class="material-symbols-outlined">assessment</span>Quản lý báo cáo</a>
+                <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <main class="content-admin">
+            <section class="panel">
+                <div class="shell-title">
+                    <h2>Quản lý báo cáo</h2>
+                    <p>Tạo và xuất các báo cáo thống kê</p>
+                </div>
+
+                <!-- Bộ lọc báo cáo -->
+                <div class="filters section-spacing">
+                    <div class="filter-group">
+                        <select>
+                            <option value="">Loại báo cáo</option>
+                            <option value="score">Báo cáo điểm số</option>
+                            <option value="attendance">Báo cáo chuyên cần</option>
+                            <option value="student">Báo cáo học sinh</option>
+                            <option value="teacher">Báo cáo giáo viên</option>
+                            <option value="class">Báo cáo lớp học</option>
+                        </select>
+                        <select>
+                            <option value="">Năm học</option>
+                            <option value="2024-2025">2024-2025</option>
+                            <option value="2023-2024">2023-2024</option>
+                        </select>
+                        <select>
+                            <option value="">Học kỳ</option>
+                            <option value="hk1">Học kỳ 1</option>
+                            <option value="hk2">Học kỳ 2</option>
+                            <option value="all">Cả năm</option>
+                        </select>
+                        <select>
+                            <option value="">Khối/Lớp</option>
+                            <option value="k5">Khối 5</option>
+                            <option value="k4">Khối 4</option>
+                            <option value="k3">Khối 3</option>
+                        </select>
+                    </div>
+                    <div class="action-group">
+                        <button class="btn primary" onclick="generateReport()">
+                            <span class="material-symbols-outlined">analytics</span> Tạo báo cáo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Các loại báo cáo -->
+                <div class="report-cards">
+                    <div class="report-card" onclick="openReportModal('score')">
+                        <div class="report-icon"><span class="material-symbols-outlined">grade</span></div>
+                        <h4>Báo cáo điểm số</h4>
+                        <p>Thống kê điểm trung bình, xếp loại học lực theo lớp, khối</p>
+                        <div class="report-actions">
+                            <button class="btn ghost small">PDF</button>
+                            <button class="btn ghost small">Excel</button>
+                        </div>
+                    </div>
+                    <div class="report-card" onclick="openReportModal('attendance')">
+                        <div class="report-icon"><span class="material-symbols-outlined">task_alt</span></div>
+                        <h4>Báo cáo chuyên cần</h4>
+                        <p>Thống kê tỉ lệ đi học, vắng mặt theo ngày, tuần, tháng</p>
+                        <div class="report-actions">
+                            <button class="btn ghost small">PDF</button>
+                            <button class="btn ghost small">Excel</button>
+                        </div>
+                    </div>
+                    <div class="report-card" onclick="openReportModal('student')">
+                        <div class="report-icon"><span class="material-symbols-outlined">group</span></div>
+                        <h4>Báo cáo học sinh</h4>
+                        <p>Danh sách học sinh, thông tin cá nhân, kết quả học tập</p>
+                        <div class="report-actions">
+                            <button class="btn ghost small">PDF</button>
+                            <button class="btn ghost small">Excel</button>
+                        </div>
+                    </div>
+                    <div class="report-card" onclick="openReportModal('teacher')">
+                        <div class="report-icon"><span class="material-symbols-outlined">person</span></div>
+                        <h4>Báo cáo giáo viên</h4>
+                        <p>Danh sách giáo viên, phân công giảng dạy, kết quả lớp phụ trách</p>
+                        <div class="report-actions">
+                            <button class="btn ghost small">PDF</button>
+                            <button class="btn ghost small">Excel</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Báo cáo đã tạo -->
+            <section class="panel">
+                <h3>Báo cáo đã tạo gần đây</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tên báo cáo</th>
+                            <th>Loại</th>
+                            <th>Ngày tạo</th>
+                            <th>Người tạo</th>
+                            <th>Định dạng</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Báo cáo điểm HK1 - Khối 5</strong></td>
+                            <td>Điểm số</td>
+                            <td>20/11/2024</td>
+                            <td>Admin</td>
+                            <td><span class="badge">PDF</span></td>
+                            <td>
+                                <button class="btn icon-only" title="Tải xuống"><span class="material-symbols-outlined">download</span></button>
+                                <button class="btn icon-only" title="Xem"><span class="material-symbols-outlined">visibility</span></button>
+                                <button class="btn icon-only text-danger" title="Xóa"><span class="material-symbols-outlined">delete</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Báo cáo chuyên cần tháng 11</strong></td>
+                            <td>Chuyên cần</td>
+                            <td>18/11/2024</td>
+                            <td>Admin</td>
+                            <td><span class="badge accent">Excel</span></td>
+                            <td>
+                                <button class="btn icon-only" title="Tải xuống"><span class="material-symbols-outlined">download</span></button>
+                                <button class="btn icon-only" title="Xem"><span class="material-symbols-outlined">visibility</span></button>
+                                <button class="btn icon-only text-danger" title="Xóa"><span class="material-symbols-outlined">delete</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Danh sách học sinh năm 2024-2025</strong></td>
+                            <td>Học sinh</td>
+                            <td>15/11/2024</td>
+                            <td>Admin</td>
+                            <td><span class="badge accent">Excel</span></td>
+                            <td>
+                                <button class="btn icon-only" title="Tải xuống"><span class="material-symbols-outlined">download</span></button>
+                                <button class="btn icon-only" title="Xem"><span class="material-symbols-outlined">visibility</span></button>
+                                <button class="btn icon-only text-danger" title="Xóa"><span class="material-symbols-outlined">delete</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination">
+                    <button class="btn ghost small" disabled>Trước</button>
+                    <button class="btn primary small">1</button>
+                    <button class="btn ghost small">2</button>
+                    <button class="btn ghost small">Sau</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <style>
+        .report-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .report-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .report-card:hover {
+            border-color: #6366f1;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+            transform: translateY(-2px);
+        }
+        .report-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .report-icon .material-symbols-outlined {
+            color: white;
+            font-size: 28px;
+        }
+        .report-card h4 {
+            margin: 0 0 8px 0;
+            color: #1f2937;
+        }
+        .report-card p {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .report-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .icon-only { padding: 4px 8px; }
+        .pagination { margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px; }
+        .filter-group { display: flex; gap: 10px; flex-wrap: wrap; }
+        .action-group { display: flex; gap: 10px; margin-left: auto; }
+    </style>
+    <script>
+        function generateReport() {
+            alert('Đang tạo báo cáo...');
+        }
+        function openReportModal(type) {
+            alert('Mở tùy chọn báo cáo: ' + type);
+        }
+    </script>
+</body>
+</html>

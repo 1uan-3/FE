@@ -1,188 +1,189 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Báo cáo tổng hợp - VieLMS</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/enhancements.css" />
-  </head>
 
-  <body>
-    <header class="header-schoolboard">
-      <div class="container">
-        <a class="logo" href="index.html">
-          <img src="./imgs/logo3.png" alt="VieLogo" />
-          <div><strong>VieLMS</strong></div>
-        </a>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Báo cáo tổng hợp - VieLMS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/enhancements.css" />
+</head>
 
-    <div class="body-schoolboard">
-      <aside class="sidebar">
-        <nav>
-          <a href="schoolboard.html"><span class="material-symbols-outlined">home</span>Trang chủ</a>
-          <a href="classes.html"><span class="material-symbols-outlined">school</span>Lớp học</a>
-          <a href="teachers.html"><span class="material-symbols-outlined">person</span>Giáo viên</a>
-          <a href="students-list.html"><span class="material-symbols-outlined">groups</span>Học sinh</a>
-          <a href="attendance.html"><span class="material-symbols-outlined">task_alt</span>Chuyên cần</a>
-          <a href="assignments.html"><span class="material-symbols-outlined">assignment</span>Phân công</a>
-          <a href="notifications.html"><span class="material-symbols-outlined">notifications</span>Thông báo</a>
-          <a class="active" href="reports.html"><span class="material-symbols-outlined">assessment</span>Báo cáo</a>
-          <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
-        </nav>
-      </aside>
-
-      <main class="content-schoolboard">
-        <section class="panel">
-          <div class="shell-title">
-            <h2>Báo cáo tổng hợp</h2>
-            <p>Thống kê học tập và chuyên cần toàn trường</p>
-          </div>
-
-          <div class="action-bar">
-            <div class="action-bar-right">
-              <select>
-                <option>Năm học 2024–2025</option>
-                <option>Năm học 2023–2024</option>
-              </select>
-              <select>
-                <option>Học kỳ 1</option>
-                <option>Học kỳ 2</option>
-              </select>
-              <button class="btn primary">
-                <span class="material-symbols-outlined">download</span>
-                Xuất báo cáo
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <section class="panel">
-          <h3>Biểu đồ kết quả học tập theo khối</h3>
-          <div class="chart-wrapper">
-            <div class="chart-flex chart-large">
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 82%">
-                  <span class="chart-bar-value">8.2</span>
-                </div>
-                <span class="chart-bar-label">Khối 5</span>
-              </div>
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 80%">
-                  <span class="chart-bar-value">8.0</span>
-                </div>
-                <span class="chart-bar-label">Khối 4</span>
-              </div>
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 78%">
-                  <span class="chart-bar-value">7.8</span>
-                </div>
-                <span class="chart-bar-label">Khối 3</span>
-              </div>
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 77%">
-                  <span class="chart-bar-value">7.7</span>
-                </div>
-                <span class="chart-bar-label">Khối 2</span>
-              </div>
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 75%">
-                  <span class="chart-bar-value">7.5</span>
-                </div>
-                <span class="chart-bar-label">Khối 1</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="panel">
-          <h3>Bảng thống kê chi tiết</h3>
-          <div class="data-table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Khối</th>
-                  <th>Số lớp</th>
-                  <th>Tổng HS</th>
-                  <th>Điểm TB</th>
-                  <th>Tỉ lệ Giỏi</th>
-                  <th>Tỉ lệ Khá</th>
-                  <th>Chuyên cần</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Khối 5</strong></td>
-                  <td>12</td>
-                  <td>420</td>
-                  <td><span class="badge accent">8.2</span></td>
-                  <td>47%</td>
-                  <td>36%</td>
-                  <td>96%</td>
-                </tr>
-                <tr>
-                  <td><strong>Khối 4</strong></td>
-                  <td>10</td>
-                  <td>350</td>
-                  <td><span class="badge accent">8.0</span></td>
-                  <td>45%</td>
-                  <td>38%</td>
-                  <td>95%</td>
-                </tr>
-                <tr>
-                  <td><strong>Khối 3</strong></td>
-                  <td>10</td>
-                  <td>340</td>
-                  <td><span class="badge accent">7.8</span></td>
-                  <td>42%</td>
-                  <td>40%</td>
-                  <td>94%</td>
-                </tr>
-                <tr>
-                  <td><strong>Khối 2</strong></td>
-                  <td>10</td>
-                  <td>346</td>
-                  <td><span class="badge accent">7.7</span></td>
-                  <td>39%</td>
-                  <td>41%</td>
-                  <td>95%</td>
-                </tr>
-                <tr>
-                  <td><strong>Khối 1</strong></td>
-                  <td>10</td>
-                  <td>346</td>
-                  <td><span class="badge accent">7.5</span></td>
-                  <td>38%</td>
-                  <td>40%</td>
-                  <td>94%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="panel">
-          <h3>Nhận xét & Đề xuất</h3>
-          <div class="alert info">
-            <div class="alert-icon">💡</div>
-            <div class="alert-content">
-              <div class="alert-title">Nhận xét chung:</div>
-              <div class="alert-message">
-                Học lực trung bình toàn trường duy trì ở mức <strong>khá tốt (8.0)</strong>. 
-                Tỉ lệ chuyên cần ổn định trên <strong>94%</strong>. 
-                Cần tập trung hỗ trợ các lớp khối 1–2 nâng cao kỹ năng cơ bản và giữ vững chuyên cần.
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+<body>
+  <header class="header-schoolboard">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img src="./imgs/logo3.png" alt="VieLogo" />
+        <div><strong>VieLMS</strong></div>
+      </a>
     </div>
-  </body>
+  </header>
+
+  <div class="body-schoolboard">
+    <aside class="sidebar">
+      <nav>
+        <a href="schoolboard.html"><span class="material-symbols-outlined">home</span>Trang chủ</a>
+        <a href="schoolboard-class.html"><span class="material-symbols-outlined">school</span>Lớp học</a>
+        <a href="schoolboard-teacher.html"><span class="material-symbols-outlined">person</span>Giáo viên</a>
+        <a href="schoolboard-student.html"><span class="material-symbols-outlined">groups</span>Học sinh</a>
+        <a href="schoolboard-attendance.html"><span class="material-symbols-outlined">task_alt</span>Chuyên cần</a>
+        <a href="schoolboard-assignment.html"><span class="material-symbols-outlined">assignment</span>Phân công</a>
+        <a href="schoolboard-notification.html"><span class="material-symbols-outlined">notifications</span>Thông
+          báo</a>
+        <a class="active" href="schoolboard-report.html"><span class="material-symbols-outlined">assessment</span>Báo
+          cáo</a>
+        <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+      </nav>
+    </aside>
+
+    <main class="content-schoolboard">
+      <section class="panel">
+        <div class="shell-title">
+          <h2>Báo cáo tổng hợp</h2>
+          <p>Thống kê học tập và chuyên cần toàn trường</p>
+        </div>
+
+        <div class="action-bar">
+          <div class="action-bar-right">
+            <select>
+              <option>Năm học 2024–2025</option>
+              <option>Năm học 2023–2024</option>
+            </select>
+            <select>
+              <option>Học kỳ 1</option>
+              <option>Học kỳ 2</option>
+            </select>
+            <button class="btn primary">
+              <span class="material-symbols-outlined">download</span>
+              Xuất báo cáo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Biểu đồ kết quả học tập theo khối</h3>
+        <div class="chart-wrapper">
+          <div class="chart-flex chart-large">
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 82%">
+                <span class="chart-bar-value">8.2</span>
+              </div>
+              <span class="chart-bar-label">Khối 5</span>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 80%">
+                <span class="chart-bar-value">8.0</span>
+              </div>
+              <span class="chart-bar-label">Khối 4</span>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 78%">
+                <span class="chart-bar-value">7.8</span>
+              </div>
+              <span class="chart-bar-label">Khối 3</span>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 77%">
+                <span class="chart-bar-value">7.7</span>
+              </div>
+              <span class="chart-bar-label">Khối 2</span>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 75%">
+                <span class="chart-bar-value">7.5</span>
+              </div>
+              <span class="chart-bar-label">Khối 1</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Bảng thống kê chi tiết</h3>
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Khối</th>
+                <th>Số lớp</th>
+                <th>Tổng HS</th>
+                <th>Điểm TB</th>
+                <th>Tỉ lệ Giỏi</th>
+                <th>Tỉ lệ Khá</th>
+                <th>Chuyên cần</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Khối 5</strong></td>
+                <td>12</td>
+                <td>420</td>
+                <td><span class="badge accent">8.2</span></td>
+                <td>47%</td>
+                <td>36%</td>
+                <td>96%</td>
+              </tr>
+              <tr>
+                <td><strong>Khối 4</strong></td>
+                <td>10</td>
+                <td>350</td>
+                <td><span class="badge accent">8.0</span></td>
+                <td>45%</td>
+                <td>38%</td>
+                <td>95%</td>
+              </tr>
+              <tr>
+                <td><strong>Khối 3</strong></td>
+                <td>10</td>
+                <td>340</td>
+                <td><span class="badge accent">7.8</span></td>
+                <td>42%</td>
+                <td>40%</td>
+                <td>94%</td>
+              </tr>
+              <tr>
+                <td><strong>Khối 2</strong></td>
+                <td>10</td>
+                <td>346</td>
+                <td><span class="badge accent">7.7</span></td>
+                <td>39%</td>
+                <td>41%</td>
+                <td>95%</td>
+              </tr>
+              <tr>
+                <td><strong>Khối 1</strong></td>
+                <td>10</td>
+                <td>346</td>
+                <td><span class="badge accent">7.5</span></td>
+                <td>38%</td>
+                <td>40%</td>
+                <td>94%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Nhận xét & Đề xuất</h3>
+        <div class="alert info">
+          <div class="alert-icon">💡</div>
+          <div class="alert-content">
+            <div class="alert-title">Nhận xét chung:</div>
+            <div class="alert-message">
+              Học lực trung bình toàn trường duy trì ở mức <strong>khá tốt (8.0)</strong>.
+              Tỉ lệ chuyên cần ổn định trên <strong>94%</strong>.
+              Cần tập trung hỗ trợ các lớp khối 1–2 nâng cao kỹ năng cơ bản và giữ vững chuyên cần.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
 </html>

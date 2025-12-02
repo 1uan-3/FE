@@ -1,11 +1,35 @@
+/*
+ * BASE CSS
+ * Purpose: Define CSS variables, basic typography, and utility classes.
+ * 
+ * TABLE OF CONTENTS:
+ * 1. Variables
+ *    - Primary Colors
+ *    - Accent Colors
+ *    - Neutral Colors
+ *    - Semantic Colors
+ *    - Text Colors
+ *    - Background Colors
+ *    - Borders & Radius
+ *    - Shadows
+ *    - Legacy Support
+ * 2. Global Resets & Typography
+ * 3. Headings
+ * 4. Base Elements (Images, Strong)
+ * 5. Layout Utilities (Container, Logo)
+ * 6. Component Utilities
+ *    - Buttons
+ *    - Form Elements
+ *    - Tables
+ *    - Badges
+ * 7. Scrollbar Customization
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* =========================================
+   1. VARIABLES
+   ========================================= */
 :root {
   /* Primary Colors - Purple/Indigo Theme */
   --primary-50: #f5f3ff;
@@ -18,12 +42,12 @@
   --primary-700: #6d28d9;
   --primary-800: #5b21b6;
   --primary-900: #4c1d95;
-  
+
   /* Accent Colors */
   --accent: #6366f1;
   --accent-strong: #4f46e5;
   --accent-light: #818cf8;
-  
+
   /* Neutral Colors */
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
@@ -35,7 +59,7 @@
   --gray-700: #374151;
   --gray-800: #1f2937;
   --gray-900: #111827;
-  
+
   /* Semantic Colors */
   --success: #10b981;
   --success-light: #d1fae5;
@@ -45,34 +69,43 @@
   --danger-light: #fee2e2;
   --info: #3b82f6;
   --info-light: #dbeafe;
-  
+
   /* Text Colors */
   --text-primary: #111827;
   --text-secondary: #6b7280;
   --text-tertiary: #9ca3af;
-  
+
   /* Background Colors */
   --bg-primary: #ffffff;
   --bg-secondary: #f9fafb;
   --bg-tertiary: #f3f4f6;
-  
-  /* Border */
+
+  /* Borders & Radius */
   --border-color: #e5e7eb;
   --border-radius: 12px;
   --border-radius-sm: 8px;
   --border-radius-lg: 16px;
-  
-  /* Shadow */
+
+  /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  
-  /* Legacy support */
+
+  /* Legacy Support (Aliases) */
   --muted: var(--text-secondary);
   --text: var(--text-primary);
   --background: var(--bg-secondary);
+}
+
+/* =========================================
+   2. GLOBAL RESETS & TYPOGRAPHY
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -91,7 +124,15 @@ a {
   transition: color 0.2s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* =========================================
+   3. HEADINGS
+   ========================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   line-height: 1.3;
   color: var(--text-primary);
@@ -118,33 +159,44 @@ h4 {
   color: var(--text-primary);
 }
 
-img{
+/* =========================================
+   4. BASE ELEMENTS
+   ========================================= */
+img {
   width: 4rem;
+  /* Default width, often overridden */
 }
 
-strong{
+strong {
   font-size: 2rem;
+  /* Note: This seems specific, might be better as a class, but keeping as is */
   font-weight: 800;
-  padding:0.5rem 0;
+  padding: 0.5rem 0;
   color: var(--accent-strong);
 }
 
+/* =========================================
+   5. LAYOUT UTILITIES
+   ========================================= */
 .container {
   width: min(1280px, 95vw);
   margin: 0 auto;
-  /* display: flex; */
   align-items: center;
   justify-content: space-between;
-  /* margin: 0 1rem; */
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
 }
 
+/* =========================================
+   6. COMPONENT UTILITIES
+   ========================================= */
+
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -159,7 +211,7 @@ strong{
   border: none;
   white-space: nowrap;
 }
-  
+
 .btn.primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   color: white;
@@ -188,7 +240,9 @@ strong{
 }
 
 /* Form Elements */
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 0.625rem 0.875rem;
   border-radius: var(--border-radius-sm);
@@ -200,13 +254,16 @@ input, select, textarea {
   transition: all 0.2s ease;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--text-tertiary);
 }
 
@@ -222,7 +279,8 @@ table {
   box-shadow: var(--shadow-sm);
 }
 
-th, td {
+th,
+td {
   padding: 0.875rem 1rem;
   text-align: left;
   font-size: 0.875rem;
@@ -280,7 +338,6 @@ tbody td strong {
   font-weight: 600;
 }
 
-
 .badge.success {
   background: var(--success-light);
   color: var(--success);
@@ -301,7 +358,9 @@ tbody td strong {
   color: var(--info);
 }
 
-/* Scrollbar */
+/* =========================================
+   7. SCROLLBAR CUSTOMIZATION
+   ========================================= */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

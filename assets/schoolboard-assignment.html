@@ -1,134 +1,135 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phân công giảng dạy - VieLMS</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/enhancements.css" />
-  </head>
 
-  <body>
-    <header class="header-schoolboard">
-      <div class="container">
-        <a class="logo" href="index.html">
-          <img src="./imgs/logo3.png" alt="VieLogo" />
-          <div><strong>VieLMS</strong></div>
-        </a>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phân công giảng dạy - VieLMS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/enhancements.css" />
+</head>
 
-    <div class="body-schoolboard">
-      <aside class="sidebar">
-        <nav>
-          <a href="schoolboard.html"><span class="material-symbols-outlined">home</span>Trang chủ</a>
-          <a href="classes.html"><span class="material-symbols-outlined">school</span>Lớp học</a>
-          <a href="teachers.html"><span class="material-symbols-outlined">person</span>Giáo viên</a>
-          <a href="students-list.html"><span class="material-symbols-outlined">groups</span>Học sinh</a>
-          <a href="attendance.html"><span class="material-symbols-outlined">task_alt</span>Chuyên cần</a>
-          <a class="active" href="assignments.html"><span class="material-symbols-outlined">assignment</span>Phân công</a>
-          <a href="notifications.html"><span class="material-symbols-outlined">notifications</span>Thông báo</a>
-          <a href="reports.html"><span class="material-symbols-outlined">assessment</span>Báo cáo</a>
-          <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
-        </nav>
-      </aside>
-
-      <main class="content-schoolboard">
-        <section class="panel">
-          <div class="shell-title">
-            <h2>Phân công giảng dạy</h2>
-            <p>Quản lý phân công giáo viên phụ trách lớp và bộ môn</p>
-          </div>
-
-          <div class="action-bar">
-            <div class="action-bar-left">
-              <div class="search-box">
-                <input type="search" placeholder="Tìm kiếm theo giáo viên hoặc lớp..." />
-              </div>
-            </div>
-            <div class="action-bar-right">
-              <select>
-                <option>Tất cả khối</option>
-                <option>Khối 5</option>
-                <option>Khối 4</option>
-                <option>Khối 3</option>
-                <option>Khối 2</option>
-                <option>Khối 1</option>
-              </select>
-              <select>
-                <option>Tất cả môn học</option>
-                <option>Toán</option>
-                <option>Tiếng Việt</option>
-                <option>Anh văn</option>
-                <option>Khoa học</option>
-                <option>Lịch sử - Địa lý</option>
-              </select>
-              <button class="btn primary">
-                <span class="material-symbols-outlined">add</span>
-                Thêm phân công
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <section class="panel">
-          <h3>Danh sách phân công</h3>
-          <div class="data-table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Mã PC</th>
-                  <th>Giáo viên</th>
-                  <th>Môn học</th>
-                  <th>Lớp</th>
-                  <th>Khối</th>
-                  <th>Học kỳ</th>
-                  <th>Năm học</th>
-                  <th>Trạng thái</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>PC001</strong></td>
-                  <td>Nguyễn Thị Lan</td>
-                  <td>Toán</td>
-                  <td>5A1</td>
-                  <td>Khối 5</td>
-                  <td>Học kỳ 1</td>
-                  <td>2024–2025</td>
-                  <td><span class="status-indicator active">Đang giảng dạy</span></td>
-                </tr>
-                <tr>
-                  <td><strong>PC002</strong></td>
-                  <td>Phạm Văn Bình</td>
-                  <td>Tiếng Việt</td>
-                  <td>4B2</td>
-                  <td>Khối 4</td>
-                  <td>Học kỳ 1</td>
-                  <td>2024–2025</td>
-                  <td><span class="status-indicator active">Đang giảng dạy</span></td>
-                </tr>
-                <tr>
-                  <td><strong>PC003</strong></td>
-                  <td>Lê Thị Ngọc</td>
-                  <td>Anh văn</td>
-                  <td>3C1</td>
-                  <td>Khối 3</td>
-                  <td>Học kỳ 1</td>
-                  <td>2024–2025</td>
-                  <td><span class="status-indicator inactive">Đang nghỉ</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </main>
+<body>
+  <header class="header-schoolboard">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img src="./imgs/logo3.png" alt="VieLogo" />
+        <div><strong>VieLMS</strong></div>
+      </a>
     </div>
-  </body>
+  </header>
+
+  <div class="body-schoolboard">
+    <aside class="sidebar">
+      <nav>
+        <a href="schoolboard.html"><span class="material-symbols-outlined">home</span>Trang chủ</a>
+        <a href="schoolboard-class.html"><span class="material-symbols-outlined">school</span>Lớp học</a>
+        <a href="schoolboard-teacher.html"><span class="material-symbols-outlined">person</span>Giáo viên</a>
+        <a href="schoolboard-student.html"><span class="material-symbols-outlined">groups</span>Học sinh</a>
+        <a href="schoolboard-attendance.html"><span class="material-symbols-outlined">task_alt</span>Chuyên cần</a>
+        <a class="active" href="schoolboard-assignment.html"><span
+            class="material-symbols-outlined">assignment</span>Phân công</a>
+        <a href="schoolboard-notification.html"><span class="material-symbols-outlined">notifications</span>Thông
+          báo</a>
+        <a href="schoolboard-report.html"><span class="material-symbols-outlined">assessment</span>Báo cáo</a>
+        <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+      </nav>
+    </aside>
+
+    <main class="content-schoolboard">
+      <section class="panel">
+        <div class="shell-title">
+          <h2>Phân công giảng dạy</h2>
+          <p>Quản lý phân công giáo viên phụ trách lớp và bộ môn</p>
+        </div>
+
+        <div class="action-bar">
+          <div class="action-bar-left">
+            <div class="search-box">
+              <input type="search" placeholder="Tìm kiếm theo giáo viên hoặc lớp..." />
+            </div>
+          </div>
+          <div class="action-bar-right">
+            <select>
+              <option>Tất cả khối</option>
+              <option>Khối 5</option>
+              <option>Khối 4</option>
+              <option>Khối 3</option>
+              <option>Khối 2</option>
+              <option>Khối 1</option>
+            </select>
+            <select>
+              <option>Tất cả môn học</option>
+              <option>Toán</option>
+              <option>Tiếng Việt</option>
+              <option>Anh văn</option>
+              <option>Khoa học</option>
+              <option>Lịch sử - Địa lý</option>
+            </select>
+            <button class="btn primary">
+              <span class="material-symbols-outlined">add</span>
+              Thêm phân công
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Danh sách phân công</h3>
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Mã PC</th>
+                <th>Giáo viên</th>
+                <th>Môn học</th>
+                <th>Lớp</th>
+                <th>Khối</th>
+                <th>Học kỳ</th>
+                <th>Năm học</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PC001</strong></td>
+                <td>Nguyễn Thị Lan</td>
+                <td>Toán</td>
+                <td>5A1</td>
+                <td>Khối 5</td>
+                <td>Học kỳ 1</td>
+                <td>2024–2025</td>
+                <td><span class="status-indicator active">Đang giảng dạy</span></td>
+              </tr>
+              <tr>
+                <td><strong>PC002</strong></td>
+                <td>Phạm Văn Bình</td>
+                <td>Tiếng Việt</td>
+                <td>4B2</td>
+                <td>Khối 4</td>
+                <td>Học kỳ 1</td>
+                <td>2024–2025</td>
+                <td><span class="status-indicator active">Đang giảng dạy</span></td>
+              </tr>
+              <tr>
+                <td><strong>PC003</strong></td>
+                <td>Lê Thị Ngọc</td>
+                <td>Anh văn</td>
+                <td>3C1</td>
+                <td>Khối 3</td>
+                <td>Học kỳ 1</td>
+                <td>2024–2025</td>
+                <td><span class="status-indicator inactive">Đang nghỉ</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
 </html>

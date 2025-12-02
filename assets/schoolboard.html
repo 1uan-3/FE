@@ -1,488 +1,461 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VieLMS - Dashboard Ban Giám Hiệu</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/enhancements.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header-schoolboard">
-      <div class="container">
-        <a class="logo" href="index.html">
-          <img src="./imgs/logo3.png" alt="VieLogo">
-          <div><strong>VieLMS</strong></div>
-        </a>
-      </div>
-    </header>
 
-    <div class="body-schoolboard">
-      <aside class="sidebar">
-        <nav>
-          <a class="active" href="#"
-            ><span class="material-symbols-outlined">home</span>Trang chủ</a
-          >
-          <a href="#"
-            ><span class="material-symbols-outlined">school</span>Lớp học</a
-          >
-          <a href="#"
-            ><span class="material-symbols-outlined">person</span>Giáo viên</a
-          >
-          <a href="#"
-            ><span class="material-symbols-outlined">groups</span>Học sinh</a
-          >
-          <a href="#"
-            ><span class="material-symbols-outlined">task_alt</span>Chuyên cần</a
-          >
-          <a href="#"
-            ><span class="material-symbols-outlined">assignment</span>Phân công</a
-          >
-          <a href="notifications.html"
-            ><span class="material-symbols-outlined">notifications</span>Thông báo</a
-          >
-          <a href="#"
-            ><span class="material-symbols-outlined">assessment</span>Báo cáo</a
-          >
-          <a href="logout.html"
-            ><span class="material-symbols-outlined">logout</span>Đăng xuất</a
-          >
-        </nav>
-      </aside>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VieLMS - Dashboard Ban Giám Hiệu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/enhancements.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
 
-      <main class="content-schoolboard">
-        <section class="panel">
-          <div class="shell-title">
-            <h2>Trang chủ Ban Giám Hiệu</h2>
-            <p>Tổng quan KPI theo năm học, học kỳ và khối</p>
-          </div>
-
-          <div class="filters filter-section">
-            <select>
-              <option>Năm học 2024–2025</option>
-              <option>Năm học 2023–2024</option>
-            </select>
-            <select>
-              <option>Học kỳ 1</option>
-              <option>Học kỳ 2</option>
-            </select>
-            <select>
-              <option>Tất cả khối</option>
-              <option>Khối 5</option>
-              <option>Khối 4</option>
-              <option>Khối 3</option>
-              <option>Khối 2</option>
-              <option>Khối 1</option>
-            </select>
-            <button class="btn ghost">Làm mới dữ liệu</button>
-          </div>
-
-          <div class="kpi-cards">
-            <div class="card">
-              <span>Tổng số học sinh</span>
-              <strong class="large">1,256</strong>
-            </div>
-            <div class="card">
-              <span>Tỉ lệ chuyên cần</span>
-              <strong class="large success">95%</strong>
-            </div>
-            <div class="card">
-              <span>Số lớp</span>
-              <strong class="large">42</strong>
-            </div>
-            <div class="card">
-              <span>Cảnh báo nguy cơ</span>
-              <strong class="large danger">18</strong>
-            </div>
-          </div>
-        </section>
-
-        <section class="panel">
-          <h3>Thống kê theo khối</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Khối</th>
-                <th>Số lớp</th>
-                <th>Số HS</th>
-                <th>Điểm TB</th>
-                <th>Chuyên cần</th>
-                <th>Học lực Giỏi</th>
-                <th>Học lực Khá</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Khối 5</strong></td>
-                <td>12</td>
-                <td>420</td>
-                <td><span class="badge accent">8.1</span></td>
-                <td>96%</td>
-                <td>45%</td>
-                <td>38%</td>
-              </tr>
-              <tr>
-                <td><strong>Khối 4</strong></td>
-                <td>10</td>
-                <td>350</td>
-                <td><span class="badge accent">7.9</span></td>
-                <td>94%</td>
-                <td>42%</td>
-                <td>40%</td>
-              </tr>
-              <tr>
-                <td><strong>Khối 3</strong></td>
-                <td>10</td>
-                <td>340</td>
-                <td><span class="badge accent">7.7</span></td>
-                <td>93%</td>
-                <td>38%</td>
-                <td>42%</td>
-              </tr>
-              <tr>
-                <td><strong>Khối 2</strong></td>
-                <td>10</td>
-                <td>346</td>
-                <td><span class="badge accent">7.8</span></td>
-                <td>95%</td>
-                <td>40%</td>
-                <td>41%</td>
-              </tr>
-              <tr>
-                <td><strong>Khối 1</strong></td>
-                <td>10</td>
-                <td>346</td>
-                <td><span class="badge accent">7.8</span></td>
-                <td>95%</td>
-                <td>40%</td>
-                <td>41%</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="panel">
-          <h3>Biểu đồ điểm trung bình theo khối</h3>
-          <div class="chart-wrapper">
-            <div class="chart-flex chart-large">
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 81%">
-                  <span class="chart-bar-value">8.1</span>
-                </div>
-                <span class="chart-bar-label">Khối 5</span>
-              </div>
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 79%">
-                  <span class="chart-bar-value">7.9</span>
-                </div>
-                <span class="chart-bar-label">Khối 4</span>
-              </div>
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 77%">
-                  <span class="chart-bar-value">7.7</span>
-                </div>
-                <span class="chart-bar-label">Khối 3</span>
-              </div>
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 78%">
-                  <span class="chart-bar-value">7.8</span>
-                </div>
-                <span class="chart-bar-label">Khối 2</span>
-              </div>
-              <div class="chart-column">
-                <div class="chart-bar" style="height: 78%">
-                  <span class="chart-bar-value">8.8</span>
-                </div>
-                <span class="chart-bar-label">Khối 1</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="panel">
-          <h3>Cảnh báo học lực và chuyên cần</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Lớp</th>
-                <th>Chuyên cần</th>
-                <th>Điểm TB</th>
-                <th>Môn yếu nhất</th>
-                <th>Số HS cần hỗ trợ</th>
-                <th>Thao tác</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>5A2</strong></td>
-                <td class="text-danger">88%</td>
-                <td><span class="badge accent">6.8</span></td>
-                <td>Toán: 6.1</td>
-                <td>5</td>
-                <td><a href="#" class="link-accent">Xem chi tiết</a></td>
-              </tr>
-              <tr>
-                <td><strong>4B1</strong></td>
-                <td class="text-warning">86%</td>
-                <td><span class="badge accent">6.9</span></td>
-                <td>Tiếng Việt: 6.3</td>
-                <td>3</td>
-                <td><a href="#" class="link-accent">Xem chi tiết</a></td>
-              </tr>
-              <tr>
-                <td><strong>3C3</strong></td>
-                <td class="text-warning">89%</td>
-                <td><span class="badge accent">6.7</span></td>
-                <td>Ngoại ngữ: 6.0</td>
-                <td>4</td>
-                <td><a href="#" class="link-accent">Xem chi tiết</a></td>
-              </tr>
-              <tr>
-                <td><strong>2D2</strong></td>
-                <td class="text-danger">85%</td>
-                <td><span class="badge accent">6.5</span></td>
-                <td>Toán: 5.9</td>
-                <td>6</td>
-                <td><a href="#" class="link-accent">Xem chi tiết</a></td>
-              </tr>
-              <tr>
-                <td><strong>1A2</strong></td>
-                <td class="text-danger">95%</td>
-                <td><span class="badge accent">9.5</span></td>
-                <td>Toán: 8.9</td>
-                <td>6</td>
-                <td><a href="#" class="link-accent">Xem chi tiết</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="panel">
-          <h3>Danh sách lớp & Giáo viên chủ nhiệm</h3>
-          <div class="filters section-spacing">
-            <input type="search" placeholder="Tìm lớp hoặc giáo viên..." class="input-medium" />
-            <select>
-              <option>Tất cả khối</option>
-              <option>Khối 5</option>
-              <option>Khối 4</option>
-              <option>Khối 3</option>
-              <option>Khối 2</option>
-              <option>Khối 1</option>
-            </select>
-            <button class="btn ghost">Thêm lớp mới</button>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Lớp</th>
-                <th>GV chủ nhiệm</th>
-                <th>Số HS</th>
-                <th>Điểm TB</th>
-                <th>Chuyên cần</th>
-                <th>Xếp loại</th>
-                <th>Thao tác</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>5A1</strong></td>
-                <td>Nguyễn Thị A</td>
-                <td>35</td>
-                <td><span class="badge accent">8.2</span></td>
-                <td>96%</td>
-                <td>Giỏi</td>
-                <td><a href="#" class="link-accent">Xem</a></td>
-              </tr>
-              <tr>
-                <td><strong>4C2</strong></td>
-                <td>Trần Văn B</td>
-                <td>34</td>
-                <td><span class="badge accent">7.8</span></td>
-                <td>88%</td>
-                <td>Khá</td>
-                <td><a href="#" class="link-accent">Xem</a></td>
-              </tr>
-              <tr>
-                <td><strong>3B1</strong></td>
-                <td>Lê Thị C</td>
-                <td>36</td>
-                <td><span class="badge accent">7.9</span></td>
-                <td>94%</td>
-                <td>Khá</td>
-                <td><a href="#" class="link-accent">Xem</a></td>
-              </tr>
-              <tr>
-                <td><strong>2B2</strong></td>
-                <td>Phạm Văn D</td>
-                <td>35</td>
-                <td><span class="badge accent">8.0</span></td>
-                <td>95%</td>
-                <td>Giỏi</td>
-                <td><a href="#" class="link-accent">Xem</a></td>
-              </tr>
-              <tr>
-                <td><strong>1D1</strong></td>
-                <td>Hoàng Thị E</td>
-                <td>34</td>
-                <td><span class="badge accent">7.7</span></td>
-                <td>93%</td>
-                <td>Khá</td>
-                <td><a href="#" class="link-accent">Xem</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="panel">
-          <h3>Danh sách giáo viên</h3>
-          <div class="filters section-spacing">
-            <input type="search" placeholder="Tìm giáo viên..." class="input-medium" />
-            <select>
-              <option>Tất cả bộ môn</option>
-              <option>Toán</option>
-              <option>Tiếng Việt</option>
-              <option>Ngoại ngữ</option>
-              <option>Đạo đức</option>
-              <option>Khoa học</option>
-            </select>
-            <button class="btn ghost">Thêm giáo viên</button>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Họ tên</th>
-                <th>Bộ môn</th>
-                <th>Số lớp</th>
-                <th>Tổng HS</th>
-                <th>Điểm TB</th>
-                <th>Liên hệ</th>
-                <th>Thao tác</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Bùi Duy Luận</strong></td>
-                <td>Toán</td>
-                <td>3</td>
-                <td>105</td>
-                <td><span class="badge accent">8.1</span></td>
-                <td>[email]</td>
-                <td><a href="#" class="link-accent">Xem</a></td>
-              </tr>
-              <tr>
-                <td><strong>Trần Văn B</strong></td>
-                <td>Tiếng Việt</td>
-                <td>4</td>
-                <td>140</td>
-                <td><span class="badge accent">7.9</span></td>
-                <td>[email]</td>
-                <td><a href="#" class="link-accent">Xem</a></td>
-              </tr>
-              <tr>
-                <td><strong>Lê Thị C</strong></td>
-                <td>Ngoại ngữ</td>
-                <td>5</td>
-                <td>175</td>
-                <td><span class="badge accent">8.3</span></td>
-                <td>[email]</td>
-                <td><a href="#" class="link-accent">Xem</a></td>
-              </tr>
-              <tr>
-                <td><strong>Phạm Văn D</strong></td>
-                <td>Đạo đức</td>
-                <td>3</td>
-                <td>105</td>
-                <td><span class="badge accent">7.6</span></td>
-                <td>[email]</td>
-                <td><a href="#" class="link-accent">Xem</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="panel">
-          <h3>Báo cáo & Xuất dữ liệu</h3>
-          <div class="filters filter-section">
-            <select>
-              <option>Năm học 2024–2025</option>
-              <option>Năm học 2023–2024</option>
-            </select>
-            <select>
-              <option>Học kỳ 1</option>
-              <option>Học kỳ 2</option>
-              <option>Cả năm</option>
-            </select>
-            <select>
-              <option>Tất cả khối</option>
-              <option>Khối 5</option>
-              <option>Khối 4</option>
-              <option>Khối 3</option>
-              <option>Khối 2</option>
-              <option>Khối 1</option>
-            </select>
-          </div>
-          <div class="form-actions">
-            <button class="btn primary">📄 Xuất PDF</button>
-            <button class="btn primary">📊 Xuất Excel</button>
-            <button class="btn primary">📋 Xuất CSV</button>
-            <button class="btn ghost">👁️ Xem trực tuyến</button>
-          </div>
-        </section>
-
-        <section class="panel">
-          <h3>Gửi thông báo toàn trường</h3>
-          <form class="compose form-medium section-spacing">
-            <label
-              ><span>Gửi đến</span>
-              <select required>
-                <option value="">-- Chọn đối tượng --</option>
-                <option>Toàn trường</option>
-                <option>Tất cả giáo viên</option>
-                <option>Tất cả học sinh</option>
-                <option>Tất cả phụ huynh</option>
-                <option>Khối 5</option>
-                <option>Khối 4</option>
-                <option>Khối 3</option>
-                <option>Khối 2</option>
-                <option>Khối 1</option>
-              </select>
-            </label>
-            <label
-              ><span>Tiêu đề</span>
-              <input type="text" placeholder="Nhập tiêu đề thông báo" required />
-            </label>
-            <label
-              ><span>Nội dung</span>
-              <textarea
-                rows="6"
-                placeholder="Nhập nội dung thông báo..."
-                required
-              ></textarea>
-            </label>
-            <label
-              ><span>Mức độ ưu tiên</span>
-              <select required>
-                <option>Bình thường</option>
-                <option>Quan trọng</option>
-                <option>Khẩn cấp</option>
-              </select>
-            </label>
-            <button type="submit" class="btn primary">Gửi thông báo</button>
-          </form>
-        </section>
-      </main>
+<body>
+  <header class="header-schoolboard">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img src="./imgs/logo3.png" alt="VieLogo">
+        <div><strong>VieLMS</strong></div>
+      </a>
     </div>
+  </header>
 
-    <script src="js/main.js"></script>
-  </body>
+  <div class="body-schoolboard">
+    <aside class="sidebar">
+      <nav>
+        <a class="active" href="schoolboard.html"><span class="material-symbols-outlined">home</span>Trang chủ</a>
+        <a href="schoolboard-class.html"><span class="material-symbols-outlined">school</span>Lớp học</a>
+        <a href="schoolboard-teacher.html"><span class="material-symbols-outlined">person</span>Giáo viên</a>
+        <a href="schoolboard-student.html"><span class="material-symbols-outlined">groups</span>Học sinh</a>
+        <a href="schoolboard-attendance.html"><span class="material-symbols-outlined">task_alt</span>Chuyên cần</a>
+        <a href="schoolboard-assignment.html"><span class="material-symbols-outlined">assignment</span>Phân công</a>
+        <a href="schoolboard-notification.html"><span class="material-symbols-outlined">notifications</span>Thông
+          báo</a>
+        <a href="schoolboard-report.html"><span class="material-symbols-outlined">assessment</span>Báo cáo</a>
+        <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+      </nav>
+    </aside>
+
+    <main class="content-schoolboard">
+      <section class="panel">
+        <div class="shell-title">
+          <h2>Trang chủ Ban Giám Hiệu</h2>
+          <p>Tổng quan KPI theo năm học, học kỳ và khối</p>
+        </div>
+
+        <div class="filters filter-section">
+          <select>
+            <option>Năm học 2024–2025</option>
+            <option>Năm học 2023–2024</option>
+          </select>
+          <select>
+            <option>Học kỳ 1</option>
+            <option>Học kỳ 2</option>
+          </select>
+          <select>
+            <option>Tất cả khối</option>
+            <option>Khối 5</option>
+            <option>Khối 4</option>
+            <option>Khối 3</option>
+            <option>Khối 2</option>
+            <option>Khối 1</option>
+          </select>
+          <button class="btn ghost">Làm mới dữ liệu</button>
+        </div>
+
+        <div class="kpi-cards">
+          <div class="card">
+            <span>Tổng số học sinh</span>
+            <strong class="large">1,256</strong>
+          </div>
+          <div class="card">
+            <span>Tỉ lệ chuyên cần</span>
+            <strong class="large success">95%</strong>
+          </div>
+          <div class="card">
+            <span>Số lớp</span>
+            <strong class="large">42</strong>
+          </div>
+          <div class="card">
+            <span>Cảnh báo nguy cơ</span>
+            <strong class="large danger">18</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Thống kê theo khối</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Khối</th>
+              <th>Số lớp</th>
+              <th>Số HS</th>
+              <th>Điểm TB</th>
+              <th>Chuyên cần</th>
+              <th>Học lực Giỏi</th>
+              <th>Học lực Khá</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Khối 5</strong></td>
+              <td>12</td>
+              <td>420</td>
+              <td><span class="badge accent">8.1</span></td>
+              <td>96%</td>
+              <td>45%</td>
+              <td>38%</td>
+            </tr>
+            <tr>
+              <td><strong>Khối 4</strong></td>
+              <td>10</td>
+              <td>350</td>
+              <td><span class="badge accent">7.9</span></td>
+              <td>94%</td>
+              <td>42%</td>
+              <td>40%</td>
+            </tr>
+            <tr>
+              <td><strong>Khối 3</strong></td>
+              <td>10</td>
+              <td>340</td>
+              <td><span class="badge accent">7.7</span></td>
+              <td>93%</td>
+              <td>38%</td>
+              <td>42%</td>
+            </tr>
+            <tr>
+              <td><strong>Khối 2</strong></td>
+              <td>10</td>
+              <td>346</td>
+              <td><span class="badge accent">7.8</span></td>
+              <td>95%</td>
+              <td>40%</td>
+              <td>41%</td>
+            </tr>
+            <tr>
+              <td><strong>Khối 1</strong></td>
+              <td>10</td>
+              <td>346</td>
+              <td><span class="badge accent">7.8</span></td>
+              <td>95%</td>
+              <td>40%</td>
+              <td>41%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h3>Biểu đồ điểm trung bình theo khối</h3>
+        <div class="chart-wrapper">
+          <div class="chart-flex chart-large">
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 81%">
+                <span class="chart-bar-value">8.1</span>
+              </div>
+              <span class="chart-bar-label">Khối 5</span>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 79%">
+                <span class="chart-bar-value">7.9</span>
+              </div>
+              <span class="chart-bar-label">Khối 4</span>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 77%">
+                <span class="chart-bar-value">7.7</span>
+              </div>
+              <span class="chart-bar-label">Khối 3</span>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 78%">
+                <span class="chart-bar-value">7.8</span>
+              </div>
+              <span class="chart-bar-label">Khối 2</span>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar" style="height: 78%">
+                <span class="chart-bar-value">8.8</span>
+              </div>
+              <span class="chart-bar-label">Khối 1</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Cảnh báo học lực và chuyên cần</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Lớp</th>
+              <th>Chuyên cần</th>
+              <th>Điểm TB</th>
+              <th>Môn yếu nhất</th>
+              <th>Số HS cần hỗ trợ</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>5A2</strong></td>
+              <td class="text-danger">88%</td>
+              <td><span class="badge accent">6.8</span></td>
+              <td>Toán: 6.1</td>
+              <td>5</td>
+              <td><a href="#" class="link-accent">Xem chi tiết</a></td>
+            </tr>
+            <tr>
+              <td><strong>4B1</strong></td>
+              <td class="text-warning">86%</td>
+              <td><span class="badge accent">6.9</span></td>
+              <td>Tiếng Việt: 6.3</td>
+              <td>3</td>
+              <td><a href="#" class="link-accent">Xem chi tiết</a></td>
+            </tr>
+            <tr>
+              <td><strong>3C3</strong></td>
+              <td class="text-warning">89%</td>
+              <td><span class="badge accent">6.7</span></td>
+              <td>Ngoại ngữ: 6.0</td>
+              <td>4</td>
+              <td><a href="#" class="link-accent">Xem chi tiết</a></td>
+            </tr>
+            <tr>
+              <td><strong>2D2</strong></td>
+              <td class="text-danger">85%</td>
+              <td><span class="badge accent">6.5</span></td>
+              <td>Toán: 5.9</td>
+              <td>6</td>
+              <td><a href="#" class="link-accent">Xem chi tiết</a></td>
+            </tr>
+            <tr>
+              <td><strong>1A2</strong></td>
+              <td class="text-danger">95%</td>
+              <td><span class="badge accent">9.5</span></td>
+              <td>Toán: 8.9</td>
+              <td>6</td>
+              <td><a href="#" class="link-accent">Xem chi tiết</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h3>Danh sách lớp & Giáo viên chủ nhiệm</h3>
+        <div class="filters section-spacing">
+          <input type="search" placeholder="Tìm lớp hoặc giáo viên..." class="input-medium" />
+          <select>
+            <option>Tất cả khối</option>
+            <option>Khối 5</option>
+            <option>Khối 4</option>
+            <option>Khối 3</option>
+            <option>Khối 2</option>
+            <option>Khối 1</option>
+          </select>
+          <button class="btn ghost">Thêm lớp mới</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Lớp</th>
+              <th>GV chủ nhiệm</th>
+              <th>Số HS</th>
+              <th>Điểm TB</th>
+              <th>Chuyên cần</th>
+              <th>Xếp loại</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>5A1</strong></td>
+              <td>Nguyễn Thị A</td>
+              <td>35</td>
+              <td><span class="badge accent">8.2</span></td>
+              <td>96%</td>
+              <td>Giỏi</td>
+              <td><a href="#" class="link-accent">Xem</a></td>
+            </tr>
+            <tr>
+              <td><strong>4C2</strong></td>
+              <td>Trần Văn B</td>
+              <td>34</td>
+              <td><span class="badge accent">7.8</span></td>
+              <td>88%</td>
+              <td>Khá</td>
+              <td><a href="#" class="link-accent">Xem</a></td>
+            </tr>
+            <tr>
+              <td><strong>3B1</strong></td>
+              <td>Lê Thị C</td>
+              <td>36</td>
+              <td><span class="badge accent">7.9</span></td>
+              <td>94%</td>
+              <td>Khá</td>
+              <td><a href="#" class="link-accent">Xem</a></td>
+            </tr>
+            <tr>
+              <td><strong>2B2</strong></td>
+              <td>Phạm Văn D</td>
+              <td>35</td>
+              <td><span class="badge accent">8.0</span></td>
+              <td>95%</td>
+              <td>Giỏi</td>
+              <td><a href="#" class="link-accent">Xem</a></td>
+            </tr>
+            <tr>
+              <td><strong>1D1</strong></td>
+              <td>Hoàng Thị E</td>
+              <td>34</td>
+              <td><span class="badge accent">7.7</span></td>
+              <td>93%</td>
+              <td>Khá</td>
+              <td><a href="#" class="link-accent">Xem</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h3>Danh sách giáo viên</h3>
+        <div class="filters section-spacing">
+          <input type="search" placeholder="Tìm giáo viên..." class="input-medium" />
+          <select>
+            <option>Tất cả bộ môn</option>
+            <option>Toán</option>
+            <option>Tiếng Việt</option>
+            <option>Ngoại ngữ</option>
+            <option>Đạo đức</option>
+            <option>Khoa học</option>
+          </select>
+          <button class="btn ghost">Thêm giáo viên</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Họ tên</th>
+              <th>Bộ môn</th>
+              <th>Số lớp</th>
+              <th>Tổng HS</th>
+              <th>Điểm TB</th>
+              <th>Liên hệ</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bùi Duy Luận</strong></td>
+              <td>Toán</td>
+              <td>3</td>
+              <td>105</td>
+              <td><span class="badge accent">8.1</span></td>
+              <td>[email]</td>
+              <td><a href="#" class="link-accent">Xem</a></td>
+            </tr>
+            <tr>
+              <td><strong>Trần Văn B</strong></td>
+              <td>Tiếng Việt</td>
+              <td>4</td>
+              <td>140</td>
+              <td><span class="badge accent">7.9</span></td>
+              <td>[email]</td>
+              <td><a href="#" class="link-accent">Xem</a></td>
+            </tr>
+            <tr>
+              <td><strong>Lê Thị C</strong></td>
+              <td>Ngoại ngữ</td>
+              <td>5</td>
+              <td>175</td>
+              <td><span class="badge accent">8.3</span></td>
+              <td>[email]</td>
+              <td><a href="#" class="link-accent">Xem</a></td>
+            </tr>
+            <tr>
+              <td><strong>Phạm Văn D</strong></td>
+              <td>Đạo đức</td>
+              <td>3</td>
+              <td>105</td>
+              <td><span class="badge accent">7.6</span></td>
+              <td>[email]</td>
+              <td><a href="#" class="link-accent">Xem</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h3>Báo cáo & Xuất dữ liệu</h3>
+        <div class="filters filter-section">
+          <select>
+            <option>Năm học 2024–2025</option>
+            <option>Năm học 2023–2024</option>
+          </select>
+          <select>
+            <option>Học kỳ 1</option>
+            <option>Học kỳ 2</option>
+            <option>Cả năm</option>
+          </select>
+          <select>
+            <option>Tất cả khối</option>
+            <option>Khối 5</option>
+            <option>Khối 4</option>
+            <option>Khối 3</option>
+            <option>Khối 2</option>
+            <option>Khối 1</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button class="btn primary">📄 Xuất PDF</button>
+          <button class="btn primary">📊 Xuất Excel</button>
+          <button class="btn primary">📋 Xuất CSV</button>
+          <button class="btn ghost">👁️ Xem trực tuyến</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Gửi thông báo toàn trường</h3>
+        <form class="compose form-medium section-spacing">
+          <label><span>Gửi đến</span>
+            <select required>
+              <option value="">-- Chọn đối tượng --</option>
+              <option>Toàn trường</option>
+              <option>Tất cả giáo viên</option>
+              <option>Tất cả học sinh</option>
+              <option>Tất cả phụ huynh</option>
+              <option>Khối 5</option>
+              <option>Khối 4</option>
+              <option>Khối 3</option>
+              <option>Khối 2</option>
+              <option>Khối 1</option>
+            </select>
+          </label>
+          <label><span>Tiêu đề</span>
+            <input type="text" placeholder="Nhập tiêu đề thông báo" required />
+          </label>
+          <label><span>Nội dung</span>
+            <textarea rows="6" placeholder="Nhập nội dung thông báo..." required></textarea>
+          </label>
+          <label><span>Mức độ ưu tiên</span>
+            <select required>
+              <option>Bình thường</option>
+              <option>Quan trọng</option>
+              <option>Khẩn cấp</option>
+            </select>
+          </label>
+          <button type="submit" class="btn primary">Gửi thông báo</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>

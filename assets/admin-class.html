@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header-admin">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="./imgs/logo3.png" alt="VieLogo">
+                <div><strong>VieLMS</strong></div>
+            </a>
+            <!-- <div class="user-menu">
+                <span>Xin chào, <strong>Admin</strong></span>
+            </div> -->
+        </div>
+    </header>
+
+    <div class="body-admin">
+        <aside class="sidebar">
+            <nav>
+                <a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Tổng quan</a>
+                <a href="admin-users.html"><span class="material-symbols-outlined">manage_accounts</span>Quản lý người dùng</a>
+                <a class="active" href="admin-class.html"><span class="material-symbols-outlined">school</span>Quản lý lớp học</a>
+                <a href="admin-student.html"><span class="material-symbols-outlined">group</span>Quản lý học sinh</a>
+                <a href="admin-teacher.html"><span class="material-symbols-outlined">person</span>Quản lý giáo viên</a>
+                <a href="admin-score.html"><span class="material-symbols-outlined">grade</span>Quản lý điểm số</a>
+                <a href="admin-attendance.html"><span class="material-symbols-outlined">task_alt</span>Quản lý chuyên cần</a>
+                <a href="admin-notification.html"><span class="material-symbols-outlined">notifications</span>Quản lý thông báo</a>
+                <a href="admin-report.html"><span class="material-symbols-outlined">assessment</span>Quản lý báo cáo</a>
+                <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <main class="content-admin">
+            <section class="panel">
+                <div class="shell-title">
+                    <h2>Quản lý lớp học</h2>
+                    <p>Quản lý thông tin các lớp học trong trường</p>
+                </div>
+
+                <div class="filters section-spacing">
+                    <div class="filter-group">
+                        <input type="search" placeholder="Tìm kiếm lớp học..." class="input-medium" />
+                        <select>
+                            <option value="">Tất cả khối</option>
+                            <option value="1">Khối 1</option>
+                            <option value="2">Khối 2</option>
+                            <option value="3">Khối 3</option>
+                            <option value="4">Khối 4</option>
+                            <option value="5">Khối 5</option>
+                        </select>
+                        <select>
+                            <option value="">Năm học</option>
+                            <option value="2024-2025">2024-2025</option>
+                            <option value="2023-2024">2023-2024</option>
+                        </select>
+                    </div>
+                    <div class="action-group">
+                        <button class="btn primary" onclick="openAddClassModal()">
+                            <span class="material-symbols-outlined">add</span> Thêm lớp học
+                        </button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã lớp</th>
+                            <th>Tên lớp</th>
+                            <th>Khối</th>
+                            <th>Giáo viên chủ nhiệm</th>
+                            <th>Sĩ số</th>
+                            <th>Năm học</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>L5A</strong></td>
+                            <td>Lớp 5A</td>
+                            <td>Khối 5</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>35/40</td>
+                            <td>2024-2025</td>
+                            <td>
+                                <button class="btn icon-only" title="Xem chi tiết" onclick="viewClass('L5A')">
+                                    <span class="material-symbols-outlined">visibility</span>
+                                </button>
+                                <button class="btn icon-only" title="Chỉnh sửa" onclick="editClass('L5A')">
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button class="btn icon-only text-danger" title="Xóa" onclick="deleteClass('L5A')">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>L5B</strong></td>
+                            <td>Lớp 5B</td>
+                            <td>Khối 5</td>
+                            <td>Trần Thị B</td>
+                            <td>38/40</td>
+                            <td>2024-2025</td>
+                            <td>
+                                <button class="btn icon-only" title="Xem chi tiết" onclick="viewClass('L5B')">
+                                    <span class="material-symbols-outlined">visibility</span>
+                                </button>
+                                <button class="btn icon-only" title="Chỉnh sửa" onclick="editClass('L5B')">
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button class="btn icon-only text-danger" title="Xóa" onclick="deleteClass('L5B')">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>L4A</strong></td>
+                            <td>Lớp 4A</td>
+                            <td>Khối 4</td>
+                            <td>Lê Văn C</td>
+                            <td>36/40</td>
+                            <td>2024-2025</td>
+                            <td>
+                                <button class="btn icon-only" title="Xem chi tiết" onclick="viewClass('L4A')">
+                                    <span class="material-symbols-outlined">visibility</span>
+                                </button>
+                                <button class="btn icon-only" title="Chỉnh sửa" onclick="editClass('L4A')">
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button class="btn icon-only text-danger" title="Xóa" onclick="deleteClass('L4A')">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination" style="margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px;">
+                    <button class="btn ghost small" disabled>Trước</button>
+                    <button class="btn primary small">1</button>
+                    <button class="btn ghost small">2</button>
+                    <button class="btn ghost small">3</button>
+                    <button class="btn ghost small">Sau</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Thêm/Sửa Lớp Học -->
+    <div id="classModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Thêm lớp học mới</h3>
+                <button class="btn icon-only" onclick="closeClassModal()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <form class="form-medium">
+                <div class="form-row">
+                    <label>
+                        <span>Mã lớp <span class="text-danger">*</span></span>
+                        <input type="text" id="classCode" required />
+                    </label>
+                    <label>
+                        <span>Tên lớp <span class="text-danger">*</span></span>
+                        <input type="text" id="className" required />
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>
+                        <span>Khối <span class="text-danger">*</span></span>
+                        <select id="classGrade" required>
+                            <option value="">Chọn khối</option>
+                            <option value="1">Khối 1</option>
+                            <option value="2">Khối 2</option>
+                            <option value="3">Khối 3</option>
+                            <option value="4">Khối 4</option>
+                            <option value="5">Khối 5</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Năm học <span class="text-danger">*</span></span>
+                        <select id="classYear" required>
+                            <option value="2024-2025">2024-2025</option>
+                            <option value="2023-2024">2023-2024</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>
+                        <span>Giáo viên chủ nhiệm</span>
+                        <select id="classTeacher">
+                            <option value="">Chọn giáo viên</option>
+                            <option value="GV001">Nguyễn Văn A</option>
+                            <option value="GV002">Trần Thị B</option>
+                            <option value="GV003">Lê Văn C</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Sĩ số tối đa</span>
+                        <input type="number" id="classCapacity" value="40" />
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Lưu</button>
+                    <button type="button" class="btn ghost" onclick="closeClassModal()">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <style>
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row label {
+            flex: 1;
+        }
+
+        .icon-only {
+            padding: 4px 8px;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+        }
+
+        .modal-content form {
+            padding: 20px;
+        }
+
+        .text-danger {
+            color: #dc3545;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .action-group {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .body-admin {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            .sidebar nav {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+
+            .sidebar nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .content-admin {
+                margin-left: 0;
+                padding: 15px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 8px 6px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .filters {
+                flex-direction: column;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .action-group {
+                margin-left: 0;
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10px;
+            }
+
+            .modal-header {
+                padding: 15px;
+            }
+
+            .modal-content form {
+                padding: 15px;
+            }
+
+            .pagination {
+                justify-content: center !important;
+                flex-wrap: wrap;
+            }
+
+            /* Table responsive */
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .shell-title h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar nav a span.material-symbols-outlined {
+                font-size: 18px;
+            }
+
+            .sidebar nav a {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+
+            .btn.icon-only {
+                padding: 4px 6px;
+            }
+
+            .shell-title h2 {
+                font-size: 1.1rem;
+            }
+
+            .shell-title p {
+                font-size: 13px;
+            }
+
+            input, select {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function openAddClassModal() {
+            document.getElementById('classModal').style.display = 'flex';
+            document.getElementById('modalTitle').textContent = 'Thêm lớp học mới';
+        }
+
+        function closeClassModal() {
+            document.getElementById('classModal').style.display = 'none';
+        }
+
+        function viewClass(id) {
+            alert('Xem chi tiết lớp: ' + id);
+        }
+
+        function editClass(id) {
+            document.getElementById('classModal').style.display = 'flex';
+            document.getElementById('modalTitle').textContent = 'Chỉnh sửa lớp học';
+            // Load data here
+        }
+
+        function deleteClass(id) {
+            if (confirm('Bạn có chắc chắn muốn xóa lớp ' + id + '?')) {
+                alert('Đã xóa lớp: ' + id);
+            }
+        }
+    </script>
+</body>
+
+</html>

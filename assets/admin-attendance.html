@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VieLMS - Quản lý chuyên cần</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/enhancements.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header-admin">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="./imgs/logo3.png" alt="VieLogo">
+                <div><strong>VieLMS</strong></div>
+            </a>
+        </div>
+    </header>
+
+    <div class="body-admin">
+        <aside class="sidebar">
+            <nav>
+                <a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Tổng quan</a>
+                <a href="admin-users.html"><span class="material-symbols-outlined">manage_accounts</span>Quản lý người dùng</a>
+                <a href="admin-class.html"><span class="material-symbols-outlined">school</span>Quản lý lớp học</a>
+                <a href="admin-student.html"><span class="material-symbols-outlined">group</span>Quản lý học sinh</a>
+                <a href="admin-teacher.html"><span class="material-symbols-outlined">person</span>Quản lý giáo viên</a>
+                <a href="admin-score.html"><span class="material-symbols-outlined">grade</span>Quản lý điểm số</a>
+                <a class="active" href="admin-attendance.html"><span class="material-symbols-outlined">task_alt</span>Quản lý chuyên cần</a>
+                <a href="admin-notification.html"><span class="material-symbols-outlined">notifications</span>Quản lý thông báo</a>
+                <a href="admin-report.html"><span class="material-symbols-outlined">assessment</span>Quản lý báo cáo</a>
+                <a href="logout.html"><span class="material-symbols-outlined">logout</span>Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <main class="content-admin">
+            <section class="panel">
+                <div class="shell-title">
+                    <h2>Quản lý chuyên cần</h2>
+                    <p>Theo dõi và quản lý điểm danh học sinh</p>
+                </div>
+
+                <!-- Thống kê tổng quan -->
+                <div class="kpi-cards" style="margin-bottom: 20px;">
+                    <div class="card">
+                        <span>Tỉ lệ chuyên cần hôm nay</span>
+                        <strong class="large success">95.2%</strong>
+                    </div>
+                    <div class="card">
+                        <span>Có mặt</span>
+                        <strong class="large">1,195</strong>
+                    </div>
+                    <div class="card">
+                        <span>Vắng có phép</span>
+                        <strong class="large warning">42</strong>
+                    </div>
+                    <div class="card">
+                        <span>Vắng không phép</span>
+                        <strong class="large danger">19</strong>
+                    </div>
+                </div>
+
+                <div class="filters section-spacing">
+                    <div class="filter-group">
+                        <input type="date" class="input-medium" value="2024-11-20" />
+                        <select>
+                            <option value="">Tất cả lớp</option>
+                            <option value="5A">Lớp 5A</option>
+                            <option value="5B">Lớp 5B</option>
+                            <option value="4A">Lớp 4A</option>
+                        </select>
+                        <select>
+                            <option value="">Trạng thái</option>
+                            <option value="present">Có mặt</option>
+                            <option value="absent_permitted">Vắng có phép</option>
+                            <option value="absent">Vắng không phép</option>
+                        </select>
+                        <input type="search" placeholder="Tìm học sinh..." class="input-medium" />
+                    </div>
+                    <div class="action-group">
+                        <button class="btn ghost">Xuất báo cáo</button>
+                        <button class="btn primary" onclick="openAttendanceModal()">
+                            <span class="material-symbols-outlined">add</span> Điểm danh
+                        </button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã HS</th>
+                            <th>Họ và tên</th>
+                            <th>Lớp</th>
+                            <th>Ngày</th>
+                            <th>Buổi sáng</th>
+                            <th>Buổi chiều</th>
+                            <th>Ghi chú</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>HS001</strong></td>
+                            <td>Nguyễn Văn An</td>
+                            <td>5A</td>
+                            <td>20/11/2024</td>
+                            <td><span class="badge success">Có mặt</span></td>
+                            <td><span class="badge success">Có mặt</span></td>
+                            <td>-</td>
+                            <td>
+                                <button class="btn icon-only" title="Sửa" onclick="editAttendance('HS001')"><span class="material-symbols-outlined">edit</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>HS002</strong></td>
+                            <td>Trần Thị Bình</td>
+                            <td>5A</td>
+                            <td>20/11/2024</td>
+                            <td><span class="badge warning">Vắng CP</span></td>
+                            <td><span class="badge warning">Vắng CP</span></td>
+                            <td>Ốm, có giấy bác sĩ</td>
+                            <td>
+                                <button class="btn icon-only" title="Sửa" onclick="editAttendance('HS002')"><span class="material-symbols-outlined">edit</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>HS003</strong></td>
+                            <td>Lê Minh Châu</td>
+                            <td>5B</td>
+                            <td>20/11/2024</td>
+                            <td><span class="badge success">Có mặt</span></td>
+                            <td><span class="badge danger">Vắng KP</span></td>
+                            <td>Không rõ lý do</td>
+                            <td>
+                                <button class="btn icon-only" title="Sửa" onclick="editAttendance('HS003')"><span class="material-symbols-outlined">edit</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>HS004</strong></td>
+                            <td>Phạm Văn Dũng</td>
+                            <td>4A</td>
+                            <td>20/11/2024</td>
+                            <td><span class="badge success">Có mặt</span></td>
+                            <td><span class="badge success">Có mặt</span></td>
+                            <td>-</td>
+                            <td>
+                                <button class="btn icon-only" title="Sửa" onclick="editAttendance('HS004')"><span class="material-symbols-outlined">edit</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination">
+                    <button class="btn ghost small" disabled>Trước</button>
+                    <button class="btn primary small">1</button>
+                    <button class="btn ghost small">2</button>
+                    <button class="btn ghost small">3</button>
+                    <button class="btn ghost small">Sau</button>
+                </div>
+            </section>
+
+            <!-- Thống kê theo lớp -->
+            <section class="panel">
+                <h3>Thống kê chuyên cần theo lớp</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lớp</th>
+                            <th>Sĩ số</th>
+                            <th>Có mặt</th>
+                            <th>Vắng CP</th>
+                            <th>Vắng KP</th>
+                            <th>Tỉ lệ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>5A</strong></td>
+                            <td>35</td>
+                            <td>33</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td><span class="badge accent">94.3%</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>5B</strong></td>
+                            <td>38</td>
+                            <td>36</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td><span class="badge accent">94.7%</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>4A</strong></td>
+                            <td>36</td>
+                            <td>35</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td><span class="badge accent">97.2%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Điểm danh -->
+    <div id="attendanceModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Điểm danh lớp</h3>
+                <button class="btn icon-only" onclick="closeAttendanceModal()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <form class="form-medium">
+                <div class="form-row">
+                    <label>
+                        <span>Lớp <span class="text-danger">*</span></span>
+                        <select id="attendClass" required>
+                            <option value="">Chọn lớp</option>
+                            <option value="5A">Lớp 5A</option>
+                            <option value="5B">Lớp 5B</option>
+                            <option value="4A">Lớp 4A</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Ngày <span class="text-danger">*</span></span>
+                        <input type="date" id="attendDate" required />
+                    </label>
+                    <label>
+                        <span>Buổi <span class="text-danger">*</span></span>
+                        <select id="attendSession" required>
+                            <option value="morning">Buổi sáng</option>
+                            <option value="afternoon">Buổi chiều</option>
+                        </select>
+                    </label>
+                </div>
+                <p style="margin: 15px 0; color: #666;">Chọn lớp để hiển thị danh sách học sinh điểm danh</p>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Lưu điểm danh</button>
+                    <button type="button" class="btn ghost" onclick="closeAttendanceModal()">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <style>
+        .form-row { display: flex; gap: 15px; }
+        .form-row label { flex: 1; }
+        .icon-only { padding: 4px 8px; }
+        .pagination { margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px; }
+        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+        .modal-content { background: white; border-radius: 8px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid #eee; }
+        .modal-header h3 { margin: 0; }
+        .modal-content form { padding: 20px; }
+        .text-danger { color: #dc3545; }
+        .badge.success { background: #d1fae5; color: #065f46; }
+        .badge.warning { background: #fef3c7; color: #92400e; }
+        .badge.danger { background: #fee2e2; color: #991b1b; }
+    </style>
+    <script>
+        function openAttendanceModal() {
+            document.getElementById('attendanceModal').style.display = 'flex';
+        }
+        function closeAttendanceModal() {
+            document.getElementById('attendanceModal').style.display = 'none';
+        }
+        function editAttendance(id) {
+            document.getElementById('attendanceModal').style.display = 'flex';
+            document.getElementById('modalTitle').textContent = 'Chỉnh sửa điểm danh - ' + id;
+        }
+    </script>
+</body>
+</html>
